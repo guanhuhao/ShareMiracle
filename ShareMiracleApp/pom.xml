@@ -18,25 +18,31 @@
         <module>ShareMiracle-server</module>
     </modules>
     <properties>
-        <mybatis.spring>2.2.0</mybatis.spring>
+        <mybatis-plus>3.5.3.1</mybatis-plus>
         <lombok>1.18.20</lombok>
         <fastjson>1.2.76</fastjson>
         <commons.lang>2.6</commons.lang>
         <druid>1.2.1</druid>
-        <pagehelper>1.3.0</pagehelper>
+        <pagehelper>1.4.7</pagehelper>
         <aliyun.sdk.oss>3.10.2</aliyun.sdk.oss>
         <knife4j>3.0.2</knife4j>
         <aspectj>1.9.4</aspectj>
         <jjwt>0.9.1</jjwt>
         <jaxb-api>2.3.1</jaxb-api>
         <poi>3.16</poi>
+        <redisson>3.13.6</redisson>
+        <kafka>2.9.0</kafka>
+        <mongodb>3.12.14</mongodb>
+        <data-elasticsearch>3.1.0</data-elasticsearch>
     </properties>
     <dependencyManagement>
         <dependencies>
+
+            <!-- mybatis-plus-->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.spring}</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus}</version>
             </dependency>
 
             <dependency>
@@ -105,6 +111,34 @@
                 <version>${jaxb-api}</version>
             </dependency>
 
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson}</version>
+            </dependency>
+
+            <!-- kafka-->
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${kafka}</version>
+            </dependency>
+
+            <!-- mongoDB -->
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version>${mongodb}</version>
+            </dependency>
+
+            <!-- elasticsearch-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+                <version>${data-elasticsearch}</version>
+            </dependency>
+
             <!-- poi -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
@@ -115,12 +149,6 @@
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>${poi}</version>
-            </dependency>
-            <!--微信支付-->
-            <dependency>
-                <groupId>com.github.wechatpay-apiv3</groupId>
-                <artifactId>wechatpay-apache-httpclient</artifactId>
-                <version>0.4.8</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

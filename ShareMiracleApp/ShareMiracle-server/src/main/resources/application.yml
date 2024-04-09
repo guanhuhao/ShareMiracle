@@ -1,6 +1,6 @@
 server:
   port: 8080
-
+kafkaTopic: topic-test
 spring:
   profiles:
     active: dev
@@ -8,15 +8,70 @@ spring:
     allow-circular-references: true
   datasource:
     druid:
-      driver-class-name: ${share-miracle.datasource.driver-class-name}
-      url: jdbc:mysql://${share-miracle.datasource.host}:${share-miracle.datasource.port}/${share-miracle.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
-      username: ${share-miracle.datasource.username}
-      password: ${share-miracle.datasource.password}
+      driver-class-name: ${miracle.datasource.driver-class-name}
+      url: jdbc:mysql://${miracle.datasource.host}:${miracle.datasource.port}/${miracle.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${miracle.datasource.username}
+      password: ${miracle.datasource.password}
+  redis:
+    host: ${miracle.redis.host}
+    port: ${miracle.redis.port}
+    password: ${miracle.redis.password}
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  elasticsearch:
+    uris: http://${miracle.elasticsearch.host}:${miracle.elasticsearch.port}
+  kafka:
+    bootstrap-servers: ${miracle.kafka.host}:${miracle.kafka.port}
+    producer:
+      acks: 1  #应答级别:多少个分区副本备份完成时向生产者发送ack确认(可选0、1、all/-1)
+      batch-size: 16384  #批量大小
+      properties:
+        linger.ms: 0   # 当生产端积累的消息达到batch-size或接收到消息linger.ms后,生产者就会将消息提交给kafka linger.ms为0表示每接收到一条消息就提交给kafka,这时候batch-size其实就没用了
+      buffer-memory: 33554432  #生产端缓冲区大小
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: defaultConsumerGroup  # 默认的消费组ID
+      enable-auto-commit: true  # 是否自动提交offset
+      ## 当kafka中没有初始offset或offset超出范围时将自动重置offset
+      ## earliest:重置为分区中最小的offset;
+      ## latest:重置为分区中最新的offset(消费分区中新产生的数据);
+      ## none:只要有一个分区不存在已提交的offset,就抛出异常;
+      auto-commit-interval:
+        ms: 1000
+      auto-offset-reset: latest
+      properties:
+        session.timeout.ms: 120000    # 消费会话超时时间(超过这个时间consumer没有发送心跳,就会触发rebalance操作)
+        request.timeout.ms: 180000   # 消费请求超时时间
+    listener:
+      missing-topics-fatal: false  # 消费监听接口监听的主题不存在时，自动创建，true时表示如果不存在启动报错
+    flyway:
+      connect-retries: 0  #重试次数
+
+  application:
+    name: spring-boot-mongodb
+  data:
+    mongodb:
+      host: ${miracle.mongodb.host}
+      port: ${miracle.mongodb.port}
+      database: ${miracle.mongodb.database}
+      username: ${miracle.mongodb.username}
+      password: ${miracle.mongodb.password}
+    elasticsearch:
+      client:
+        reactive:
+          endpoints: ${miracle.elasticsearch.host}:${miracle.elasticsearch.port}
+      repositories:
+        enabled: true
 
 mybatis:
   #mapper配置文件
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.sharemiracle.entity
+  type-aliases-package: com.miracle.entity
   configuration:
     #开启驼峰命名
     map-underscore-to-camel-case: true
@@ -24,13 +79,12 @@ mybatis:
 logging:
   level:
     com:
-      sky:
+      miracle:
         mapper: debug
         service: info
         controller: info
 
-
-share-miracle:
+miracle:
   jwt:
     # 设置jwt签名加密时使用的秘钥
     admin-secret-key: itcast
