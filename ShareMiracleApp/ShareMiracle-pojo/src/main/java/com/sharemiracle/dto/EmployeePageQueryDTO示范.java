@@ -5,7 +5,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class EmployeePageQueryDTO implements Serializable {
+public class EmployeePageQueryDTO示范 implements Serializable {
 
     //员工姓名
     private String name;
