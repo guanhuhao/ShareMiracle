@@ -7,12 +7,14 @@ miracle:
     username: root
     password: gcsj1234
   redis:
-    host: localhost
+    host: 118.25.174.59
     port: 6379
     password: gcsj1234
   elasticsearch:
     host: 47.236.231.61
     port: 9200
+    username: logadmin
+    password: gcsj1234
   kafka:
     host: 47.236.231.61
     port: 9092

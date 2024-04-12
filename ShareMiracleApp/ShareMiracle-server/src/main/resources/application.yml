@@ -23,7 +23,9 @@ spring:
         min-idle: 1
         time-between-eviction-runs: 10s
   elasticsearch:
-    uris: http://${miracle.elasticsearch.host}:${miracle.elasticsearch.port}
+    uris: ${miracle.elasticsearch.host}:${miracle.elasticsearch.port}
+    username: ${miracle.elasticsearch.username}
+    password: ${miracle.elasticsearch.password}
   kafka:
     bootstrap-servers: ${miracle.kafka.host}:${miracle.kafka.port}
     producer:
@@ -61,12 +63,6 @@ spring:
       database: ${miracle.mongodb.database}
       username: ${miracle.mongodb.username}
       password: ${miracle.mongodb.password}
-    elasticsearch:
-      client:
-        reactive:
-          endpoints: ${miracle.elasticsearch.host}:${miracle.elasticsearch.port}
-      repositories:
-        enabled: true
 
 mybatis:
   #mapper配置文件
