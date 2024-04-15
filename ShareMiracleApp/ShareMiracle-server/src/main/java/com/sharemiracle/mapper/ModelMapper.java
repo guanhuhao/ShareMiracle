@@ -1,21 +1,22 @@
 package com.sharemiracle.mapper;
 
-import com.sharemiracle.entity.Dataset;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.sharemiracle.entity.Model;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ModelDataMapper {
+public interface ModelMapper extends BaseMapper<Model> {
 
     /**
      * 新建模型数据
+     *
+     * @return
      */
-    void insert(Model model);
+    int insert(Model model);
 
     /*
      * 删除模型数据

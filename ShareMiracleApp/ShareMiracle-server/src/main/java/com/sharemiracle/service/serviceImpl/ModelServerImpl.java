@@ -7,7 +7,7 @@ import com.sharemiracle.dto.ModelIdsDTO;
 import com.sharemiracle.entity.Model;
 import com.sharemiracle.entity.Organization;
 import com.sharemiracle.exception.DeletionNotAllowedException;
-import com.sharemiracle.mapper.ModelDataMapper;
+import com.sharemiracle.mapper.ModelMapper;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.ModelService;
 import org.springframework.beans.BeanUtils;
@@ -23,7 +23,7 @@ import java.util.*;
 public class ModelServerImpl implements ModelService {
 
     @Autowired
-    private ModelDataMapper modelDataMapper;
+    private ModelMapper modelMapper;
 
     /**
      * 1.新建模型数据
@@ -42,7 +42,7 @@ public class ModelServerImpl implements ModelService {
         BeanUtils.copyProperties(modelDTO,model);
         model.setUserId(userId);
         //插入模型表
-        modelDataMapper.insert(model);
+        modelMapper.insert(model);
 
         //插入模型-组织关系表
         Long modelId = model.getId();
@@ -52,7 +52,7 @@ public class ModelServerImpl implements ModelService {
             for (int i = 0; i < shareOrganization.size(); i++) {
                 Organization organization = shareOrganization.get(i);
                 Long organizationId = organization.getId();
-                modelDataMapper.insertModelOrgan(modelId,organizationId);
+                modelMapper.insertModelOrgan(modelId,organizationId);
 
             }
         }
@@ -74,13 +74,13 @@ public class ModelServerImpl implements ModelService {
         }
 
         for (Long id : ids) {
-            Integer auth = modelDataMapper.selectAuthorityByid(userId, id);
+            Integer auth = modelMapper.selectAuthorityByid(userId, id);
             if(auth  == null || auth != 0) throw new DeletionNotAllowedException("删除失败");
         }
 
         for (Long id : ids) {
             //modelDataMapper.deletebyid(id);
-            modelDataMapper.deletebyid2(id);
+            modelMapper.deletebyid2(id);
         }
     }
 
@@ -99,12 +99,12 @@ public class ModelServerImpl implements ModelService {
         Long userId = 1L;
 
 
-        Long buildId = modelDataMapper.getUseridbyId(model.getId());
-        Integer au =modelDataMapper.getauByid(userId,model.getId());
+        Long buildId = modelMapper.getUseridbyId(model.getId());
+        Integer au = modelMapper.getauByid(userId,model.getId());
 
 
         if(!buildId.equals(userId) || au  == null || au != 0) return Result.error("修改失败");
-        modelDataMapper.updateByid(model);
+        modelMapper.updateByid(model);
         return Result.success();
     }
 
@@ -117,8 +117,8 @@ public class ModelServerImpl implements ModelService {
         // 通过token获得修改者id
         //Long userId = BaseContext.getCurrentId();
         Long userId = 1L;
-        Long onerId = modelDataMapper.getUseridbyId(id);
-        Integer au =modelDataMapper.getauByid(userId,id);
+        Long onerId = modelMapper.getUseridbyId(id);
+        Integer au = modelMapper.getauByid(userId,id);
 
         if(!userId.equals(onerId) || au  == null || au != 0)    return Result.error("您没有权限！");
 
@@ -126,7 +126,7 @@ public class ModelServerImpl implements ModelService {
         model.setId(id);
         model.setIsPublic(status);
 
-        modelDataMapper.updateByid(model);
+        modelMapper.updateByid(model);
         return Result.success();
     }
 
@@ -137,13 +137,13 @@ public class ModelServerImpl implements ModelService {
         // Long userId = BaseContext.getCurrentId();
         Long userId = 1L;
         Long datasetId = modelDataOrganDTO.getModelDataId();
-        Long auth = modelDataMapper.selectAuthorityById(datasetId);
+        Long auth = modelMapper.selectAuthorityById(datasetId);
         if(!Objects.equals(auth, userId)){
             throw new DeletionNotAllowedException("无权修改");
         }
         List<Long> ids = modelDataOrganDTO.getIds();
         for(Long id : ids){
-            modelDataMapper.updateDatasetOrgan(datasetId,id);
+            modelMapper.updateDatasetOrgan(datasetId,id);
         }
 
     }
@@ -152,7 +152,7 @@ public class ModelServerImpl implements ModelService {
      */
     public Model selectById(ModelDataQueryDTO modelDataQueryDTO){
         Long id = modelDataQueryDTO.getModelId();
-        return modelDataMapper.selectById(id);
+        return modelMapper.selectById(id);
 
     }
     /*
@@ -161,7 +161,7 @@ public class ModelServerImpl implements ModelService {
     public List<Long> selectAll() {
         // Long userId = BaseContext.getCurrentId();
         Long userId = 1L;
-        List<Long> organIDs = modelDataMapper.selectOrganId(userId);
+        List<Long> organIDs = modelMapper.selectOrganId(userId);
 
         if (organIDs.isEmpty()) {
             return Collections.emptyList();
@@ -169,13 +169,13 @@ public class ModelServerImpl implements ModelService {
 
         Set<Long> uniqueIds = new HashSet<>();
         for(Long organID : organIDs) {
-            int status = modelDataMapper.selectStatus(userId,organID);
+            int status = modelMapper.selectStatus(userId,organID);
             if(status == 0){
                 throw new DeletionNotAllowedException("查询失败");
             }
-            uniqueIds.addAll(modelDataMapper.selectAll(organID));
+            uniqueIds.addAll(modelMapper.selectAll(organID));
         }
-        uniqueIds.addAll(modelDataMapper.selectAllByUserId(userId));
+        uniqueIds.addAll(modelMapper.selectAllByUserId(userId));
         return new ArrayList<>(uniqueIds);
     }
 

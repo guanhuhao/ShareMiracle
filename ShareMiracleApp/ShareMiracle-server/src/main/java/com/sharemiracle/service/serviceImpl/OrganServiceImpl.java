@@ -46,7 +46,7 @@ public class OrganServiceImpl extends ServiceImpl<OrganMapper, Organization> imp
         UserOrgan userOrgan = new UserOrgan();
         userOrgan.setOrganizationId(organId);
         userOrgan.setUserId(userId);
-        // TODO:默认权限设置
+        // TODO:默认权限设置为几？
         userOrgan.setAuthority(0);
         boolean isSuccess = userOrganService.save(userOrgan);
         if(!isSuccess){
