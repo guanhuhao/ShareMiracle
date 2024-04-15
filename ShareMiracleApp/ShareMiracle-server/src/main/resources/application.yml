@@ -9,7 +9,7 @@ spring:
   datasource:
     druid:
       driver-class-name: ${miracle.datasource.driver-class-name}
-      url: jdbc:mysql://${miracle.datasource.host}:${miracle.datasource.port}/${miracle.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://localhost:3306/share_miracle?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
       username: ${miracle.datasource.username}
       password: ${miracle.datasource.password}
   redis:
@@ -22,6 +22,7 @@ spring:
         max-idle: 10
         min-idle: 1
         time-between-eviction-runs: 10s
+
   elasticsearch:
     uris: ${miracle.elasticsearch.host}:${miracle.elasticsearch.port}
     username: ${miracle.elasticsearch.username}
