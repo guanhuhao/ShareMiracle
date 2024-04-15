@@ -33,7 +33,8 @@
         <redisson>3.13.6</redisson>
         <kafka>2.9.0</kafka>
         <mongodb>3.12.14</mongodb>
-        <data-elasticsearch>3.1.0</data-elasticsearch>
+        <elasticsearch>8.9.0</elasticsearch>
+        <jakarta>2.0.1</jakarta>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -134,9 +135,14 @@
 
             <!-- elasticsearch-->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-                <version>${data-elasticsearch}</version>
+                <groupId>co.elastic.clients</groupId>
+                <artifactId>elasticsearch-java</artifactId>
+                <version>${elasticsearch}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>jakarta.json</artifactId>
+                <version>${jakarta}</version>
             </dependency>
 
             <!-- poi -->
