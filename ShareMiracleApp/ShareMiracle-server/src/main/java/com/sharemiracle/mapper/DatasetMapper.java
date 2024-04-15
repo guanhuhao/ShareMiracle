@@ -11,19 +11,19 @@ public interface DatasetMapper {
 
     Dataset selectById(Long id);
 
-    List<Long> selectAll(Long userId);
+    List<Long> selectAll(Long organID);
 
     void updateDatasetOrgan(Long datasetId,Long organId);
 
-    void insertDatasetOrgan(Long datasetId, Long organizationId);
+    void insertDatasetOrgan( Long datasetId, Long organizationId);
 
     Long selectAuthorityById(Long id);
 
     void deletebyId(Long id);
 
-    Dataset update(Dataset dataset);
+    void update(Dataset dataset);
 
-    Long selectOrganId(Long userId);
+    List<Long> selectOrganId(Long userId);
 
-    int selectStatus(Long userId);
+    int selectStatus(Long userId,Long organID);
 }

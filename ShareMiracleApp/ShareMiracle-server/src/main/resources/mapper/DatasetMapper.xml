@@ -3,7 +3,7 @@
 <mapper namespace="com.sharemiracle.mapper.DatasetMapper">
     <insert id="insert">
         insert into t_dataset (id,name,user_id,is_public,dataset_url,create_time,update_time)
-        VALUES (#{id},#{name},#{userId},#{isPublic},#{datasetUrl},#{creatTime},#{updateTime});
+        VALUES (#{id},#{name},#{userId},#{isPublic},#{datasetUrl},#{createTime},#{updateTime});
     </insert>
     <insert id="insertDatasetOrgan">
         insert into  r_dataset_organization ( dataset_id, organization_id)
@@ -24,6 +24,7 @@
             <if test="createTime != null">create_time = #{createTime},</if>
             <if test="updateTime != null">update_time = #{updateTime},</if>
         </set>
+        where id = #{id}
 
     </update>
     <delete id="deletebyId">
@@ -35,17 +36,19 @@
     </select>
 
     <select id="selectAll" resultType="java.lang.Long">
-        select
+        select dataset_id from r_dataset_organization where organization_id = #{organID}
     </select>
     <select id="selectAuthorityById" resultType="java.lang.Long">
         select user_id from t_dataset where id = #{id}
     </select>
+
+    <select id="selectStatus" resultType="java.lang.Integer">
+        select status from r_user_organization where user_id = #{userId} and organization_id = #{organID}
+    </select>
+
     <select id="selectOrganId" resultType="java.lang.Long">
         select organization_id from r_user_organization where user_id = #{userId}
     </select>
-    <select id="selectStatus" resultType="java.lang.Integer">
-        select status from r_user_organization where user_id = #{userId}
-    </select>
-
+    <select id="selectAllByUserId" resultType="java.lang.Long"></select>
 
 </mapper>

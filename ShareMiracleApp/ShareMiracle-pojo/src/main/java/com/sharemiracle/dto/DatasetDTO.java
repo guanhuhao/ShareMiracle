@@ -18,10 +18,10 @@ public class DatasetDTO implements Serializable {
     private String name;
 
     //模型是否公开（1公开 0私有）
-    private boolean isPublic;
+    private Integer isPublic;
 
     //模型存储url
-    private String modelUrl;
+    private String datasetUrl;
 
     // 组织列表（标明哪些组织有权限使用该数据，该组织需创建者在内）
     private List<Organization> shareOrganization = new ArrayList<Organization>();

@@ -37,7 +37,7 @@ public class Dataset implements Serializable {
     /**
      * 数据集是否公开
      */
-    private Boolean isPublic;
+    private Integer isPublic;
 
     /**
      * 存储数据集的url

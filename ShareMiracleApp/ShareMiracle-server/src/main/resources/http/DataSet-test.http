@@ -1,0 +1,89 @@
+POST http://localhost:8080/dataset/add
+Content-Type: application/json
+
+{
+  "id": 555666,
+  "name": "测试数据集",
+  "isPublic": 1,
+  "datasetUrl": "www.baidu.com",
+  "shareOrganization": [
+    {
+      "id": 11111
+    },
+    {
+      "id": 22222
+    },
+    {
+      "id": 33333
+    },
+    {
+      "id": 44444
+    },
+    {
+      "id": 55555
+    }]
+
+}
+
+###
+DELETE http://localhost:8080/dataset/delete
+Content-Type: application/json
+
+{
+  "id": 555666
+}
+
+###
+DELETE http://localhost:8080/dataset/delete-batch
+Content-Type: application/json
+
+
+###
+PUT http://localhost:8080/dataset/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "测试数据集",
+  "datasetUrl": "www.baidu.com"
+}
+
+
+###
+PUT http://localhost:8080/dataset/status
+Content-Type: application/json
+
+
+{
+  "id": 12345679,
+  "isPublic": 1
+}
+
+###
+
+PUT http://localhost:8080/dataset/organ
+Content-Type: application/json
+
+{
+  "datasetId": 1,
+  "ids": [11111,22222,33333,44444,55555]
+
+}
+
+
+###
+GET http://localhost:8080/dataset/query-by-id
+Content-Type: application/json
+
+{
+  "id": 12345678
+}
+
+
+
+###
+GET http://localhost:8080/dataset/query-all
+Content-Type: application/json
+
+
+

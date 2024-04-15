@@ -15,8 +15,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Service
 public class DatasetService {
@@ -30,6 +29,9 @@ public class DatasetService {
 
         dataset.setCreateTime(LocalDateTime.now());
         dataset.setUpdateTime(LocalDateTime.now());
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
+        dataset.setUserId(userId);
 
         datasetMapper.insert(dataset);
 
@@ -39,6 +41,7 @@ public class DatasetService {
         if(shareOrganization != null && !shareOrganization.isEmpty()) {
             for (Organization organization : shareOrganization) {
                 Long organizationId = organization.getId();
+                // Long id = datasetId+organizationId;
                 datasetMapper.insertDatasetOrgan(datasetId, organizationId);
             }
         }
@@ -50,17 +53,28 @@ public class DatasetService {
     }
 
     public List<Long> selectAll() {
-        Long userId = BaseContext.getCurrentId();
-        Long organID = datasetMapper.selectOrganId(userId);
-        int status = datasetMapper.selectStatus(userId);
-        if(status == 0){
-            throw new DeletionNotAllowedException("查询失败");
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
+        List<Long> organIDs = datasetMapper.selectOrganId(userId);
+
+        if (organIDs.isEmpty()) {
+            return Collections.emptyList();
         }
-        return datasetMapper.selectAll(organID);
+
+        Set<Long> uniqueIds = new HashSet<>();
+        for(Long organID : organIDs) {
+            int status = datasetMapper.selectStatus(userId,organID);
+            if(status == 0){
+                throw new DeletionNotAllowedException("查询失败");
+            }
+            uniqueIds.addAll(datasetMapper.selectAll(organID));
+        }
+        return new ArrayList<>(uniqueIds);
     }
 
     public void updateDatasetOrgan(DatasetOrganDTO datasetOrganDTO) {
-        Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
         Long datasetId = datasetOrganDTO.getDatasetId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
         if(!Objects.equals(auth, userId)){
@@ -94,7 +108,8 @@ public class DatasetService {
 
         dataset.setUpdateTime(LocalDateTime.now());
 
-        Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
         Long datasetId = dataset.getId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
 
@@ -113,7 +128,8 @@ public class DatasetService {
 
         dataset.setUpdateTime(LocalDateTime.now());
 
-        Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
         Long datasetId = dataset.getId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
 
@@ -126,7 +142,8 @@ public class DatasetService {
     }
 
     public void delete(DatasetDeleteDTO datasetDeleteDTO) {
-        Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
         Long id = datasetDeleteDTO.getId();
 
         Long auth = datasetMapper.selectAuthorityById(id);
