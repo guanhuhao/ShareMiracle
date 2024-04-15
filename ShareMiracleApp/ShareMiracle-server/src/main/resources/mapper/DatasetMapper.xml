@@ -49,6 +49,9 @@
     <select id="selectOrganId" resultType="java.lang.Long">
         select organization_id from r_user_organization where user_id = #{userId}
     </select>
-    <select id="selectAllByUserId" resultType="java.lang.Long"></select>
+
+    <select id="selectAllByUserId" resultType="java.lang.Long">
+        select id from t_dataset where user_id = #{userId}
+    </select>
 
 </mapper>

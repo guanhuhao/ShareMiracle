@@ -69,6 +69,7 @@ public class DatasetService {
             }
             uniqueIds.addAll(datasetMapper.selectAll(organID));
         }
+        uniqueIds.addAll(datasetMapper.selectAllByUserId(userId));
         return new ArrayList<>(uniqueIds);
     }
 

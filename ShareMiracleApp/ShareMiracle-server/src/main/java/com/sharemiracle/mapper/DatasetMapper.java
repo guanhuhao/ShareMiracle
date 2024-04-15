@@ -26,4 +26,7 @@ public interface DatasetMapper {
     List<Long> selectOrganId(Long userId);
 
     int selectStatus(Long userId,Long organID);
+
+    List<Long> selectAllByUserId(Long userId);
+
 }
