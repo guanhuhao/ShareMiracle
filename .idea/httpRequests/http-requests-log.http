@@ -1,0 +1,312 @@
+POST http://localhost:8000/user/user/login
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "collapsar",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8000/user/user/login
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "collapsar",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 185
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "username": "collapsar",
+  "name": "test",
+  "sex": "1",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "http://123456",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 185
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "username": "collapsar",
+  "name": "test",
+  "sex": "1",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "http://123456",
+  "password": "123456"
+}
+
+<> 2024-04-07T225645.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 185
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "username": "collapsar",
+  "name": "test",
+  "sex": "1",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "http://123456",
+  "password": "123456"
+}
+
+<> 2024-04-07T225336.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 182
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "name": "test",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "http://123456",
+  "password": "123456"
+}
+
+<> 2024-04-07T225224.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 182
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "name": "test",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "http://123456",
+  "password": "123456"
+}
+
+<> 2024-04-07T225151.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 182
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "name": "test",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "http://123456",
+  "password": "123456"
+}
+
+<> 2024-04-07T224904.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "name": "test",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224729.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 123321,
+  "name": "test",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224522.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "test",
+  "id": 123321,
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224417.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "test",
+  "id": 123321,
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224412.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "test",
+  "id": 123321,
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224410.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "test",
+  "id": "123321",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224315.500.json
+
+###
+
+POST http://localhost:8000/user/user/register
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "test",
+  "id": "123321",
+  "sex": "1",
+  "password": "123456",
+  "email": "test@test.com",
+  "phone": "12345678901",
+  "logoUrl": "",
+  "password": "123456"
+}
+
+<> 2024-04-07T224127.500.json
+
+###
+
