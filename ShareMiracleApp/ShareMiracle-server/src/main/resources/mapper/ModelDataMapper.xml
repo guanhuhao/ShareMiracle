@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace = "com.sharemiracle.mapper.ModelDataMapper">
+<mapper namespace = "com.sharemiracle.mapper.ModelMapper">
 
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
         insert into share_miracle.t_model(id,name,user_id,is_public,model_url,create_time,update_time)
