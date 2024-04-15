@@ -1,6 +1,5 @@
 package com.sharemiracle.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,26 +8,25 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * 数据集组织关系实体类
+ * 模型组织关系实体类
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class DatasetOrgan implements Serializable {
+public class ModelOrgan implements Serializable {
 
     private static final long serialVersionUID = 1L;
     /**
      * 主键（自增）
      */
-    Long id;
+    private Long id;
     /**
-     * 数据集id
+     *  模型id
      */
-    Long datasetId;
+    private Long modelId;
     /**
      * 组织id
      */
-    Long organizationId;
-
+    private Long organizationId;
 }

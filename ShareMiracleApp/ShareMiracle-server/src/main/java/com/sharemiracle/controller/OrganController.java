@@ -38,11 +38,12 @@ public class OrganController {
      * 修改用户在组织中的权限
      * @param organId
      * @param userId
+     * @param auth
      * @return
      */
-    @PutMapping("/authority/{status}")
-    public Result<String> authority(Long organId, Long userId){
-        return organService.authority(organId, userId);
+    @PutMapping("/authority/{authority}")
+    public Result<String> authority(Long organId, Long userId, @PathVariable("authority") Integer auth){
+        return organService.authority(organId, userId, auth);
     }
 
     /**
@@ -52,8 +53,8 @@ public class OrganController {
      * @return
      */
     @PutMapping("/status/{status}")
-    public Result<String> status(@PathVariable("status") String status, Long userId){
-        return organService.status(status, userId);
+    public Result<String> status(@PathVariable("status") Integer status, Long userId, Long organId){
+        return organService.status(status, userId, organId);
     }
 
     /**

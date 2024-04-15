@@ -10,9 +10,9 @@ public interface OrganService extends IService<Organization> {
 
     Result<String> joinOrgan(Long organId);
 
-    Result<String> authority(Long organId, Long userId);
+    Result<String> authority(Long organId, Long userId, Integer auth);
 
-    Result<String> status(String status, Long userId);
+    Result<String> status(Integer status, Long userId, Long organId);
 
     Result<String> deleteOrganUser(String organId, String userId);
 

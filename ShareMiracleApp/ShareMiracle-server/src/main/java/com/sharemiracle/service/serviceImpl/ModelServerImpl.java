@@ -1,11 +1,10 @@
-package com.sharemiracle.service.impl;
+package com.sharemiracle.service.serviceImpl;
 
 import com.sharemiracle.context.BaseContext;
 import com.sharemiracle.dto.ModelDTO;
 import com.sharemiracle.dto.ModelDataOrganDTO;
 import com.sharemiracle.dto.ModelDataQueryDTO;
 import com.sharemiracle.dto.ModelIdsDTO;
-import com.sharemiracle.entity.Dataset;
 import com.sharemiracle.entity.Model;
 import com.sharemiracle.entity.Organization;
 import com.sharemiracle.exception.BaseException;
@@ -14,14 +13,12 @@ import com.sharemiracle.mapper.ModelDataMapper;
 import com.sharemiracle.mapper.ModelOrganMapper;
 import com.sharemiracle.mapper.UserOrganMapper;
 import com.sharemiracle.result.Result;
-import com.sharemiracle.service.ModelDataService;
-import io.swagger.models.auth.In;
+import com.sharemiracle.service.ModelService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +26,8 @@ import java.util.List;
 
 
 @Service
-public class ModelDataServerImpl implements ModelDataService {
+public class ModelServerImpl implements ModelService {
+
     @Autowired
     private ModelDataMapper modelDataMapper;
     @Autowired
@@ -73,7 +71,7 @@ public class ModelDataServerImpl implements ModelDataService {
     public void deleteBatch(ModelIdsDTO modelIdsDTO) {
         // 通过token获得删除者id
         //Long userId = BaseContext.getCurrentId();
-        Long userId = new Long(1);
+        Long userId = 1L;
         String idsString = modelIdsDTO.getModelId();
         List<String> idss = Arrays.asList(idsString.split(","));
         List<Long>ids = new ArrayList<>();
@@ -104,7 +102,7 @@ public class ModelDataServerImpl implements ModelDataService {
 
         // 通过token获得修改者id
         //Long userId = BaseContext.getCurrentId();
-        Long userId = new Long(1);
+        Long userId = 1L;
 
 
         Long buildId = modelDataMapper.getUseridbyId(model.getId());
@@ -124,7 +122,7 @@ public class ModelDataServerImpl implements ModelDataService {
 
         // 通过token获得修改者id
         //Long userId = BaseContext.getCurrentId();
-        Long userId = new Long(1);
+        Long userId = 1L;
         Long onerId = modelDataMapper.getUseridbyId(id);
         Integer au =modelDataMapper.getauByid(userId,id);
 
@@ -155,7 +153,7 @@ public class ModelDataServerImpl implements ModelDataService {
         Long modelId = modelDataQueryDTO.getModelId();
         // 通过token获得修改者id
         //Long userId = BaseContext.getCurrentId();
-        Long userId = new Long(1);
+        Long userId = 1L;
 
         Long buildId = modelDataMapper.getUseridbyId(modelId);
         Integer au =modelDataMapper.getauByid(userId,modelId);
@@ -170,7 +168,7 @@ public class ModelDataServerImpl implements ModelDataService {
     public List<Long> selectAll() {
         // 通过token获得修改者id
         //Long userId = BaseContext.getCurrentId();
-        Long userId = new Long(1);
+        Long userId = 1L;
         return modelDataMapper.selectAll(userId);
     }
 
