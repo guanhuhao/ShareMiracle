@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sharemiracle.mapper.DatasetMapper">
+    <insert id="insert">
+        insert into t_dataset (id,name,user_id,is_public,dataset_url,create_time,update_time)
+        VALUES (#{id},#{name},#{userId},#{isPublic},#{datasetUrl},#{creatTime},#{updateTime});
+    </insert>
+    <insert id="insertDatasetOrgan">
+        insert into  r_dataset_organization ( dataset_id, organization_id)
+        VALUES (#{datasetId}, #{organizationId});
+    </insert>
+
+    <update id="updateDatasetOrgan">
+        insert into  r_dataset_organization ( dataset_id, organization_id)
+        VALUES (#{datasetId}, #{organId});
+    </update>
+    <update id="update">
+        update t_dataset
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="isPublic != null">is_public = #{isPublic},</if>
+            <if test="datasetUrl != null">dataset_url = #{datasetUrl},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </set>
+
+    </update>
+    <delete id="deletebyId">
+        delete from t_dataset where id = #{id}
+    </delete>
+
+    <select id="selectById" resultType="com.sharemiracle.entity.Dataset">
+        select dataset_url from t_dataset where id = #{id}
+    </select>
+
+    <select id="selectAll" resultType="java.lang.Long">
+        select
+    </select>
+    <select id="selectAuthorityById" resultType="java.lang.Long">
+        select user_id from t_dataset where id = #{id}
+    </select>
+    <select id="selectOrganId" resultType="java.lang.Long">
+        select organization_id from r_user_organization where user_id = #{userId}
+    </select>
+    <select id="selectStatus" resultType="java.lang.Integer">
+        select status from r_user_organization where user_id = #{userId}
+    </select>
+
+
+</mapper>
