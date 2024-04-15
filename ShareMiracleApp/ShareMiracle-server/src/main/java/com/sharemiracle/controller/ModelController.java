@@ -29,7 +29,7 @@ public class ModelController {
     /**
      * 1.新建模型数据
      */
-    @PostMapping
+    @PostMapping("add")
     public Result buildModelController(@RequestBody ModelDTO modelDTO) {
         log.info("新建模型数据：{}", modelDTO);
         modelService.add(modelDTO);
@@ -68,42 +68,42 @@ public class ModelController {
     @PutMapping("/organ")
     public Result<ModelDataOrganVO> updateDatasetOrgan(@RequestBody ModelDataOrganDTO modelDataOrganDTO) {
         log.info("修改数据集有权使用组织: {}",modelDataOrganDTO);
-
         modelService.updateDatasetOrgan(modelDataOrganDTO);
-
         log.info("修改数据集有权使用组织成功");
-
         return Result.success();
     }
-
 
     /*
      * 6.请求模型数据信息
      */
-    @GetMapping
-    public Result<ModelDataQueryVO> selectById(@RequestBody ModelDataQueryDTO modelQueryDTO) {
-        log.info("查询数据集信息: {}",modelQueryDTO);
 
-        Model dataset = modelService.selectById(modelQueryDTO);
+    @GetMapping("/query-by-id")
+    public Result<ModelDataQueryVO> selectById(@RequestBody ModelDataQueryDTO modelDataQueryDTO ) {
+        log.info("请求数据集信息: {}",modelDataQueryDTO);
 
-        ModelDataQueryVO modeldataqueryVO = ModelDataQueryVO.builder()
-                .modelDataUrl(dataset.getModelUrl())
+        Model model = modelService.selectById(modelDataQueryDTO);
+
+        ModelDataQueryVO  modelDataQueryVO = ModelDataQueryVO.builder()
+                .modelDataUrl(model.getModelUrl())
                 .build();
-        return Result.success(modeldataqueryVO);
+        return Result.success(modelDataQueryVO);
     }
 
-    /*
+
+    /**
      * 7.查询当前用户有权使用的所有模型
      */
-    @GetMapping("/all")
+
+    @GetMapping("/query-all")
     public  Result<ModelDataQueryAllVO> selectAll() {
-        log.info("查询所有数据集信息");
+        log.info("查询当前用户有权使用的所有数据集");
 
         List<Long> list = modelService.selectAll();
 
-        ModelDataQueryAllVO datasetqueryallVO = ModelDataQueryAllVO.builder()
+        ModelDataQueryAllVO modelqueryallVO = ModelDataQueryAllVO.builder()
                 .ids(list)
                 .build();
-        return Result.success(datasetqueryallVO);
+        return Result.success(modelqueryallVO);
     }
+
 }

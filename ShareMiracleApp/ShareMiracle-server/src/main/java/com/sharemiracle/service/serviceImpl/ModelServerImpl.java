@@ -1,17 +1,13 @@
 package com.sharemiracle.service.serviceImpl;
 
-import com.sharemiracle.context.BaseContext;
 import com.sharemiracle.dto.ModelDTO;
 import com.sharemiracle.dto.ModelDataOrganDTO;
 import com.sharemiracle.dto.ModelDataQueryDTO;
 import com.sharemiracle.dto.ModelIdsDTO;
 import com.sharemiracle.entity.Model;
 import com.sharemiracle.entity.Organization;
-import com.sharemiracle.exception.BaseException;
 import com.sharemiracle.exception.DeletionNotAllowedException;
 import com.sharemiracle.mapper.ModelDataMapper;
-import com.sharemiracle.mapper.ModelOrganMapper;
-import com.sharemiracle.mapper.UserOrganMapper;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.ModelService;
 import org.springframework.beans.BeanUtils;
@@ -20,9 +16,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 
 @Service
@@ -30,10 +24,7 @@ public class ModelServerImpl implements ModelService {
 
     @Autowired
     private ModelDataMapper modelDataMapper;
-    @Autowired
-    private ModelOrganMapper modelOrganMapper;
-    @Autowired
-    private UserOrganMapper userOrganMapper;
+
     /**
      * 1.新建模型数据
      */
@@ -44,10 +35,12 @@ public class ModelServerImpl implements ModelService {
         model.setCreateTime(LocalDateTime.now());
         model.setUpdateTime(LocalDateTime.now());
 
-        //获得操作人id  TODO 创建人id  组织 模型关系
-        Long userId = BaseContext.getCurrentId();
-        model.setUserId(userId);
+        //获得操作人id
+        //Long userId = BaseContext.getCurrentId();
+        Long userId = 1L;
+
         BeanUtils.copyProperties(modelDTO,model);
+        model.setUserId(userId);
         //插入模型表
         modelDataMapper.insert(model);
 
@@ -59,7 +52,8 @@ public class ModelServerImpl implements ModelService {
             for (int i = 0; i < shareOrganization.size(); i++) {
                 Organization organization = shareOrganization.get(i);
                 Long organizationId = organization.getId();
-                modelOrganMapper.insert(modelId,organizationId);
+                modelDataMapper.insertModelOrgan(modelId,organizationId);
+
             }
         }
     }
@@ -80,19 +74,19 @@ public class ModelServerImpl implements ModelService {
         }
 
         for (Long id : ids) {
-            Integer auth = userOrganMapper.selectAuthorityByid(userId, id);
+            Integer auth = modelDataMapper.selectAuthorityByid(userId, id);
             if(auth  == null || auth != 0) throw new DeletionNotAllowedException("删除失败");
         }
 
         for (Long id : ids) {
-            modelDataMapper.deletebyid(id);
+            //modelDataMapper.deletebyid(id);
             modelDataMapper.deletebyid2(id);
         }
     }
 
     /*
-    * 3.修改模型数据
-    * */
+     * 3.修改模型数据
+     * */
     @Override
     public Result update(ModelDTO modelDTO) {
         Model model = new Model();
@@ -110,7 +104,7 @@ public class ModelServerImpl implements ModelService {
 
 
         if(!buildId.equals(userId) || au  == null || au != 0) return Result.error("修改失败");
-        modelDataMapper.update(model);
+        modelDataMapper.updateByid(model);
         return Result.success();
     }
 
@@ -132,45 +126,59 @@ public class ModelServerImpl implements ModelService {
         model.setId(id);
         model.setIsPublic(status);
 
-        modelDataMapper.update(model);
+        modelDataMapper.updateByid(model);
         return Result.success();
     }
 
     /*
      * 5.修改模型有权使用组织
      */
-    public void updateDatasetOrgan(ModelDataOrganDTO datasetOrganDTO) {
-        Long datasetId = datasetOrganDTO.getModelDataId();
-        List<Long> ids = datasetOrganDTO.getIds();
+    public void updateDatasetOrgan(ModelDataOrganDTO modelDataOrganDTO) {
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 1L;
+        Long datasetId = modelDataOrganDTO.getModelDataId();
+        Long auth = modelDataMapper.selectAuthorityById(datasetId);
+        if(!Objects.equals(auth, userId)){
+            throw new DeletionNotAllowedException("无权修改");
+        }
+        List<Long> ids = modelDataOrganDTO.getIds();
         for(Long id : ids){
             modelDataMapper.updateDatasetOrgan(datasetId,id);
         }
+
     }
     /*
      * 6.请求模型数据信息
      */
     public Model selectById(ModelDataQueryDTO modelDataQueryDTO){
-        Long modelId = modelDataQueryDTO.getModelId();
-        // 通过token获得修改者id
-        //Long userId = BaseContext.getCurrentId();
-        Long userId = 1L;
+        Long id = modelDataQueryDTO.getModelId();
+        return modelDataMapper.selectById(id);
 
-        Long buildId = modelDataMapper.getUseridbyId(modelId);
-        Integer au =modelDataMapper.getauByid(userId,modelId);
-        if(!buildId.equals(userId) || au  == null || au != 0) throw new BaseException("没有权限操作");
-
-
-        return modelDataMapper.selectById(modelId);
     }
     /*
      * 7.查询当前用户有权使用的所有模型
      */
     public List<Long> selectAll() {
-        // 通过token获得修改者id
-        //Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
         Long userId = 1L;
-        return modelDataMapper.selectAll(userId);
+        List<Long> organIDs = modelDataMapper.selectOrganId(userId);
+
+        if (organIDs.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        Set<Long> uniqueIds = new HashSet<>();
+        for(Long organID : organIDs) {
+            int status = modelDataMapper.selectStatus(userId,organID);
+            if(status == 0){
+                throw new DeletionNotAllowedException("查询失败");
+            }
+            uniqueIds.addAll(modelDataMapper.selectAll(organID));
+        }
+        uniqueIds.addAll(modelDataMapper.selectAllByUserId(userId));
+        return new ArrayList<>(uniqueIds);
     }
+
 
 
 }

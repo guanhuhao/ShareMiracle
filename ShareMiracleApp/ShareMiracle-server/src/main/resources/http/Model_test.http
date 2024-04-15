@@ -1,0 +1,82 @@
+POST http://localhost:8080/model/add
+Content-Type: application/json
+
+{
+  "id": 333,
+  "name": "模型1",
+  "isPublic": 1,
+  "modelUrl": "www.baidu.com",
+  "shareOrganization": [
+    {
+      "id": 11111
+    },
+    {
+      "id": 22222
+    },
+    {
+      "id": 33333
+    },
+    {
+      "id": 44444
+    },
+    {
+      "id": 55555
+    }]
+
+}
+
+###
+DELETE http://localhost:8080/model
+Content-Type: application/json
+
+{
+  "modelId": "33,222"
+}
+
+###
+PUT http://localhost:8080/model
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "测试数据集",
+  "modelUrl": "www.baidu.com"
+}
+
+
+###
+###PUT http://localhost:8080/model/status
+PUT http://localhost:8080/model/0?id=3
+###Content-Type: application/json
+
+
+{
+  "id": 3,
+  "isPublic": 0
+}
+
+###
+
+PUT http://localhost:8080/dataset/organ
+Content-Type: application/json
+
+{
+  "datasetId": 1,
+  "ids": [11111,22222,33333,44444,55555]
+
+}
+
+
+###
+GET http://localhost:8080/dataset/query-by-id
+Content-Type: application/json
+
+{
+  "id": 12345678
+}
+
+
+
+###
+GET http://localhost:8080/dataset/query-all
+Content-Type: application/json

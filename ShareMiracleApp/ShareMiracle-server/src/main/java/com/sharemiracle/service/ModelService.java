@@ -21,7 +21,9 @@ public interface ModelService {
 
     void updateDatasetOrgan(ModelDataOrganDTO modelDataOrganDTO);
 
+
     Model selectById(ModelDataQueryDTO modelQueryDTO);
+
 
     List<Long> selectAll();
 }

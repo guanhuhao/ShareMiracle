@@ -20,11 +20,33 @@
             <if test="createTime != null">create_time = #{createTime},</if>
             <if test="updateTime != null">update_time = #{updateTime},</if>
         </set>
-        where id = #{id}
     </update>
 
+    <insert id="insertModelOrgan">
+        insert into share_miracle.r_model_organization(model_id, organization_id)
+        values
+            (#{modelId},#{organizationId})
+    </insert>
+
+    <update id="updateByid">
+        update share_miracle.t_model
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="id != null">id = #{id},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="isPublic != null">is_public = #{isPublic},</if>
+            <if test="modelUrl != null">model_url = #{modelUrl},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </set>
+            where id = #{id}
+    </update>
+
+
+
+
     <update id="updateDatasetOrgan">
-        insert into  share_miracle.r_dataset_organization ( dataset_id, organization_id)
+        insert into  share_miracle.r_model_organization( model_id, organization_id)
         VALUES (#{datasetId}, #{organId});
     </update>
 
@@ -32,9 +54,24 @@
         select model_url from share_miracle.t_model where id = #{id}
     </select>
 
+    <select id="selectStatus" resultType="java.lang.Integer">
+        select status from share_miracle.r_user_organization where user_id = #{userId} and organization_id = #{organID}
+    </select>
+
+    <select id="selectOrganId" resultType="java.lang.Long">
+        select organization_id from share_miracle.r_user_organization where user_id = #{userId}
+    </select>
+
+    <select id="selectAllByUserId" resultType="java.lang.Long">
+        select id from share_miracle.t_model where user_id = #{userId}
+    </select>
+
     <select id="selectAll" resultType="java.lang.Long">
-        select model_id from share_miracle.r_model_organization,share_miracle.r_user_organization
-        where status = 1 and (authority = 1 or authority = 0) and share_miracle.r_user_organization.organization_id = share_miracle.r_model_organization.organization_id and user_id = #{id}
+        select model_id from share_miracle.r_model_organization where organization_id = #{organID}
+    </select>
+
+    <select id="selectAuthorityById" resultType="java.lang.Long">
+        select user_id from share_miracle.t_model where id = #{id}
     </select>
 
 
