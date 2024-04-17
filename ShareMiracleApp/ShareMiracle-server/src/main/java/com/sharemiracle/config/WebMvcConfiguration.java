@@ -32,10 +32,9 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * @param registry
      */
     protected void addInterceptors(InterceptorRegistry registry) {
-        // TODO: 当前jwt验证未开启
         log.info("开始注册自定义拦截器...");
         registry.addInterceptor(jwtTokenAdminInterceptor)
-                .addPathPatterns("/test/user/**")
+                .addPathPatterns("/user/**")
                 .excludePathPatterns("/user") // 排除注册
                 .excludePathPatterns("/user/login"); // 排除登录
     }
