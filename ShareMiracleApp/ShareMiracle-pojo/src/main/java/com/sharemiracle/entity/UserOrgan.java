@@ -8,13 +8,13 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
 /**
- * 组织实体类
+ * 用户组织关系实体类
  */
-@ Data
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Organization implements Serializable {
+public class UserOrgan implements Serializable {
 
     private static final long serialVersionUID = 1L;
     /**
@@ -22,15 +22,19 @@ public class Organization implements Serializable {
      */
     private Long id;
     /**
-     * 组织名字
+     * 用户id
      */
-    private String name;
+    private Long userId;
     /**
-     * 组织类型（如学校等）
+     * 组织id
      */
-    private Integer type;
+    private Long organizationId;
     /**
-     * 组织头像url
+     * 用户在该组织中的权限(0:创建者 1:管理权限 2:无权限)
      */
-    private String logoUrl;
+    private Integer authority;
+    /**
+     * 用户在组织中的状态(0:禁用 1:可用)
+     */
+    private Integer status;
 }

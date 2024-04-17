@@ -5,7 +5,6 @@ import com.sharemiracle.dto.DatasetDeleteDTO;
 import com.sharemiracle.dto.DatasetOrganDTO;
 import com.sharemiracle.dto.DatasetQueryDTO;
 import com.sharemiracle.entity.Dataset;
-import com.sharemiracle.entity.DatasetOrgan;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.DatasetService;
 import com.sharemiracle.vo.DatasetOrganVO;
@@ -18,11 +17,11 @@ import javax.annotation.Resource;
 import java.util.List;
 
 
-
 @Slf4j
 @RestController
 @RequestMapping("/dataset")
 public class DatasetController {
+
     @Resource
     private DatasetService datasetService;
 

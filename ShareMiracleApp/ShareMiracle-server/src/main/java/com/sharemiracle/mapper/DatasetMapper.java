@@ -1,13 +1,14 @@
 package com.sharemiracle.mapper;
 
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.sharemiracle.entity.Dataset;
 
 import java.util.List;
 
-public interface DatasetMapper {
+public interface DatasetMapper extends BaseMapper<Dataset> {
 
-    void insert(Dataset dataset);
+    int insert(Dataset dataset);
 
     Dataset selectById(Long id);
 
