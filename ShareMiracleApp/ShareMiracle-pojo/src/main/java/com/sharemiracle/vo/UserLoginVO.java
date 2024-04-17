@@ -11,10 +11,21 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserLoginVO示范 implements Serializable {
-
+public class UserLoginVO implements Serializable {
+    /**
+     * 用户id
+     */
     private Long id;
-    private String openid;
+    /**
+     * 姓名
+     */
+    private String name;
+    /**
+     * jwt令牌
+     */
     private String token;
-
+    /**
+     * 用户名
+     */
+    private String username;
 }

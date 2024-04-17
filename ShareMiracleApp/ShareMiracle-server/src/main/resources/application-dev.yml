@@ -1,15 +1,15 @@
 miracle:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    host: localhost #47.236.231.61
+    host: 118.25.174.59
     port: 3306
     database: share-miracle
     username: root
-    password: 1234
+    password: gcsj1234
   redis:
     host: 118.25.174.59
     port: 6379
-    password: 123456
+    password: gcsj1234
   elasticsearch:
     host: 47.236.231.61
     port: 9200

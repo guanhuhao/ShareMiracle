@@ -1,6 +1,5 @@
 server:
   port: 8080
-kafkaTopic: topic-test
 spring:
   profiles:
     active: dev
@@ -9,7 +8,7 @@ spring:
   datasource:
     druid:
       driver-class-name: ${miracle.datasource.driver-class-name}
-      url: jdbc:mysql://localhost:3306/share_miracle?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+      url: jdbc:mysql://${miracle.datasource.host}:3306/share_miracle?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
       username: ${miracle.datasource.username}
       password: ${miracle.datasource.password}
   redis:
@@ -30,33 +29,21 @@ spring:
   kafka:
     bootstrap-servers: ${miracle.kafka.host}:${miracle.kafka.port}
     producer:
-      acks: 1  #应答级别:多少个分区副本备份完成时向生产者发送ack确认(可选0、1、all/-1)
-      batch-size: 16384  #批量大小
-      properties:
-        linger.ms: 0   # 当生产端积累的消息达到batch-size或接收到消息linger.ms后,生产者就会将消息提交给kafka linger.ms为0表示每接收到一条消息就提交给kafka,这时候batch-size其实就没用了
-      buffer-memory: 33554432  #生产端缓冲区大小
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: 1  #应答级别:多少个分区副本备份完成时向生产者发送ack确认(可选0、1、all/-1)
     consumer:
-      group-id: defaultConsumerGroup  # 默认的消费组ID
-      enable-auto-commit: true  # 是否自动提交offset
-      ## 当kafka中没有初始offset或offset超出范围时将自动重置offset
-      ## earliest:重置为分区中最小的offset;
-      ## latest:重置为分区中最新的offset(消费分区中新产生的数据);
-      ## none:只要有一个分区不存在已提交的offset,就抛出异常;
-      auto-commit-interval:
-        ms: 1000
-      auto-offset-reset: latest
-      properties:
-        session.timeout.ms: 120000    # 消费会话超时时间(超过这个时间consumer没有发送心跳,就会触发rebalance操作)
-        request.timeout.ms: 180000   # 消费请求超时时间
+      group-id: ${spring.application.name}-ConsumerGroup  # 默认的消费组ID
+      enable-auto-commit: false  # 是否自动提交offset
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     listener:
       missing-topics-fatal: false  # 消费监听接口监听的主题不存在时，自动创建，true时表示如果不存在启动报错
-    flyway:
-      connect-retries: 0  #重试次数
+      ack-mode: manual_immediate
 
   application:
-    name: spring-boot-mongodb
+    name: share-miracle
   data:
     mongodb:
       host: ${miracle.mongodb.host}
@@ -67,8 +54,8 @@ spring:
 
 mybatis:
   #mapper配置文件
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.miracle.entity
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.sharemiracle.entity
   configuration:
     #开启驼峰命名
     map-underscore-to-camel-case: true
@@ -81,11 +68,8 @@ logging:
         service: info
         controller: info
 
-miracle:
-  jwt:
-    # 设置jwt签名加密时使用的秘钥
-    admin-secret-key: itcast
-    # 设置jwt过期时间
-    admin-ttl: 7200000
-    # 设置前端传递过来的令牌名称
-    admin-token-name: token
+share-miracle.jwt:
+  userSecretKey: gcsj_miracle_share_user_secret_key
+  userTtl: 7200000  # 例如用户token有效时间为2小时 单位:毫秒
+  userTokenName: authorization
+

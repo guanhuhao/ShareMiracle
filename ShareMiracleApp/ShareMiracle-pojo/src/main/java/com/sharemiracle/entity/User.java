@@ -1,5 +1,8 @@
 package com.sharemiracle.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +19,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@TableName("t_user")
 public class User implements Serializable{
 
     private static final long serialVersionUID = 1L;
@@ -23,6 +27,7 @@ public class User implements Serializable{
     /**
      * 主键 自增
      */
+    @TableId(value = "id", type = IdType.AUTO) // 指定主键生成策略为数据库自增
     private Long id;
 
     /**
