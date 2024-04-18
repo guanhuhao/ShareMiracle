@@ -8,5 +8,4 @@ import java.io.Serializable;
 public class DatasetQueryDTO implements Serializable {
 
     private Long id;
-
 }

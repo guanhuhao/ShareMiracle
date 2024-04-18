@@ -6,7 +6,7 @@ import com.sharemiracle.dto.DatasetOrganDTO;
 import com.sharemiracle.dto.DatasetQueryDTO;
 import com.sharemiracle.entity.Dataset;
 import com.sharemiracle.result.Result;
-import com.sharemiracle.service.DatasetService;
+import com.sharemiracle.service.serviceImpl.DatasetServiceImpl;
 import com.sharemiracle.vo.DatasetOrganVO;
 import com.sharemiracle.vo.DatasetQueryAllVO;
 import com.sharemiracle.vo.DatasetQueryVO;
@@ -17,13 +17,13 @@ import javax.annotation.Resource;
 import java.util.List;
 
 
+
 @Slf4j
 @RestController
 @RequestMapping("/dataset")
 public class DatasetController {
-
     @Resource
-    private DatasetService datasetService;
+    private DatasetServiceImpl datasetService;
 
     /**
      * 新建数据集

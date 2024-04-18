@@ -73,6 +73,9 @@
     <select id="selectAuthorityById" resultType="java.lang.Long">
         select user_id from share_miracle.t_model where id = #{id}
     </select>
+    <select id="selectAllisPublic" resultType="java.lang.Long">
+        select id from share_miracle.t_model where is_public = 1
+    </select>
 
 
 </mapper>

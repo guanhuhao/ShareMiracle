@@ -10,9 +10,11 @@ public interface DatasetMapper extends BaseMapper<Dataset> {
 
     int insert(Dataset dataset);
 
-    Dataset selectById(Long id);
+    void deleteById(Long id);
 
-    List<Long> selectAll(Long organID);
+    void update(Dataset dataset);
+
+    int selectStatus(Long userId,Long organID);
 
     void updateDatasetOrgan(Long datasetId,Long organId);
 
@@ -20,14 +22,14 @@ public interface DatasetMapper extends BaseMapper<Dataset> {
 
     Long selectAuthorityById(Long id);
 
-    void deletebyId(Long id);
+    Dataset selectById(Long id);
 
-    void update(Dataset dataset);
-
-    List<Long> selectOrganId(Long userId);
-
-    int selectStatus(Long userId,Long organID);
+    List<Long> selectAll(Long organID);
 
     List<Long> selectAllByUserId(Long userId);
+
+    List<Long> selectAllisPublic();
+
+    List<Long> selectOrganId(Long userId);
 
 }

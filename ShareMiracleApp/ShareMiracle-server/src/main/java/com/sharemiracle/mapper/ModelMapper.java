@@ -62,6 +62,9 @@ public interface ModelMapper extends BaseMapper<Model> {
 
     List<Long> selectAllByUserId(Long userId);
 
+    List<Long> selectAllisPublic();
+
+
 
 
 }

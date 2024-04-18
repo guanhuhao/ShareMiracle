@@ -1,6 +1,5 @@
 package com.sharemiracle.service.serviceImpl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sharemiracle.context.BaseContext;
 import com.sharemiracle.dto.DatasetDTO;
 import com.sharemiracle.dto.DatasetDeleteDTO;
@@ -17,8 +16,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Service
 public class DatasetServiceImpl implements DatasetService {
@@ -26,12 +24,16 @@ public class DatasetServiceImpl implements DatasetService {
     @Resource
     private DatasetMapper datasetMapper;
 
+    @Override
     public void add(DatasetDTO datasetDTO) {
         Dataset dataset = new Dataset();
         BeanUtils.copyProperties(datasetDTO,dataset);
 
         dataset.setCreateTime(LocalDateTime.now());
         dataset.setUpdateTime(LocalDateTime.now());
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
+        dataset.setUserId(userId);
 
         datasetMapper.insert(dataset);
 
@@ -41,39 +43,27 @@ public class DatasetServiceImpl implements DatasetService {
         if(shareOrganization != null && !shareOrganization.isEmpty()) {
             for (Organization organization : shareOrganization) {
                 Long organizationId = organization.getId();
+                // Long id = datasetId+organizationId;
                 datasetMapper.insertDatasetOrgan(datasetId, organizationId);
             }
         }
     }
 
-    public Dataset selectById(DatasetQueryDTO datasetQueryDTO){
-        Long id = datasetQueryDTO.getId();
-        return datasetMapper.selectById(id);
-    }
+    @Override
+    public void delete(DatasetDeleteDTO datasetDeleteDTO) {
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
+        Long id = datasetDeleteDTO.getId();
 
-    public List<Long> selectAll() {
-        Long userId = BaseContext.getCurrentId();
-        Long organID = datasetMapper.selectOrganId(userId);
-        int status = datasetMapper.selectStatus(userId);
-        if(status == 0){
-            throw new DeletionNotAllowedException("查询失败");
-        }
-        return datasetMapper.selectAll(organID);
-    }
-
-    public void updateDatasetOrgan(DatasetOrganDTO datasetOrganDTO) {
-        Long userId = BaseContext.getCurrentId();
-        Long datasetId = datasetOrganDTO.getDatasetId();
-        Long auth = datasetMapper.selectAuthorityById(datasetId);
+        Long auth = datasetMapper.selectAuthorityById(id);
         if(!Objects.equals(auth, userId)){
-            throw new DeletionNotAllowedException("无权修改");
-        }
-        List<Long> ids = datasetOrganDTO.getIds();
-        for(Long id : ids){
-            datasetMapper.updateDatasetOrgan(datasetId,id);
+            throw new DeletionNotAllowedException("删除失败");
+        }else{
+            datasetMapper.deleteById(id);
         }
     }
 
+    @Override
     public void deleteBatch(DatasetDeleteDTO datasetDeleteDTO) {
         Long userId = BaseContext.getCurrentId();
         List<Long> ids = datasetDeleteDTO.getIds();
@@ -83,20 +73,20 @@ public class DatasetServiceImpl implements DatasetService {
             if(!Objects.equals(auth, userId)){
                 throw new DeletionNotAllowedException("删除失败");
             }else{
-                datasetMapper.deletebyId(id);
+                datasetMapper.deleteById(id);
             }
-
         }
-
     }
 
+    @Override
     public Result<String> update(DatasetDTO datasetDTO) {
         Dataset dataset = new Dataset();
         BeanUtils.copyProperties(datasetDTO,dataset);
 
         dataset.setUpdateTime(LocalDateTime.now());
 
-        Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
         Long datasetId = dataset.getId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
 
@@ -109,13 +99,15 @@ public class DatasetServiceImpl implements DatasetService {
 
     }
 
+    @Override
     public Result<String> updateStatus(DatasetDTO datasetDTO) {
         Dataset dataset = new Dataset();
         BeanUtils.copyProperties(datasetDTO,dataset);
 
         dataset.setUpdateTime(LocalDateTime.now());
 
-        Long userId = BaseContext.getCurrentId();
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
         Long datasetId = dataset.getId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
 
@@ -127,15 +119,47 @@ public class DatasetServiceImpl implements DatasetService {
         return Result.success();
     }
 
-    public void delete(DatasetDeleteDTO datasetDeleteDTO) {
-        Long userId = BaseContext.getCurrentId();
-        Long id = datasetDeleteDTO.getId();
-
-        Long auth = datasetMapper.selectAuthorityById(id);
+    @Override
+    public void updateDatasetOrgan(DatasetOrganDTO datasetOrganDTO) {
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
+        Long datasetId = datasetOrganDTO.getDatasetId();
+        Long auth = datasetMapper.selectAuthorityById(datasetId);
         if(!Objects.equals(auth, userId)){
-            throw new DeletionNotAllowedException("删除失败");
-        }else{
-            datasetMapper.deletebyId(id);
+            throw new DeletionNotAllowedException("无权修改");
         }
+        List<Long> ids = datasetOrganDTO.getIds();
+        for(Long id : ids){
+            datasetMapper.updateDatasetOrgan(datasetId,id);
+        }
+    }
+
+    @Override
+    public Dataset selectById(DatasetQueryDTO datasetQueryDTO){
+        Long id = datasetQueryDTO.getId();
+        return datasetMapper.selectById(id);
+    }
+
+    @Override
+    public List<Long> selectAll() {
+        // Long userId = BaseContext.getCurrentId();
+        Long userId = 123456L;
+
+        List<Long> organIDs = datasetMapper.selectOrganId(userId);
+        Set<Long> uniqueIds = new HashSet<>();
+        uniqueIds.addAll(datasetMapper.selectAllByUserId(userId));
+        uniqueIds.addAll(datasetMapper.selectAllisPublic());
+
+        if (organIDs.isEmpty()) {
+            return new ArrayList<>(uniqueIds);
+        }
+        for(Long organID : organIDs) {
+            int status = datasetMapper.selectStatus(userId,organID);
+            if(status == 0){
+                throw new DeletionNotAllowedException("查询失败");
+            }
+            uniqueIds.addAll(datasetMapper.selectAll(organID));
+        }
+        return new ArrayList<>(uniqueIds);
     }
 }

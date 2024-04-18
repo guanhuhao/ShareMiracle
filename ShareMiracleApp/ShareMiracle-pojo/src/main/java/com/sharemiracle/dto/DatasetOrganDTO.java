@@ -12,5 +12,4 @@ public class DatasetOrganDTO implements Serializable {
     private Long datasetId;
 
     private List<Long> ids = new ArrayList<>();
-
 }

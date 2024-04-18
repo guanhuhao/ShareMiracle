@@ -25,4 +25,5 @@ public class DatasetDTO implements Serializable {
 
     // 组织列表（标明哪些组织有权限使用该数据，该组织需创建者在内）
     private List<Organization> shareOrganization = new ArrayList<Organization>();
+
 }

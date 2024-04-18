@@ -161,13 +161,16 @@ public class ModelServerImpl implements ModelService {
     public List<Long> selectAll() {
         // Long userId = BaseContext.getCurrentId();
         Long userId = 1L;
+
         List<Long> organIDs = modelMapper.selectOrganId(userId);
+        Set<Long> uniqueIds = new HashSet<>();
+        uniqueIds.addAll(modelMapper.selectAllByUserId(userId));
+        uniqueIds.addAll(modelMapper.selectAllisPublic());
 
         if (organIDs.isEmpty()) {
-            return Collections.emptyList();
+            return new ArrayList<>(uniqueIds);
         }
 
-        Set<Long> uniqueIds = new HashSet<>();
         for(Long organID : organIDs) {
             int status = modelMapper.selectStatus(userId,organID);
             if(status == 0){
@@ -175,11 +178,8 @@ public class ModelServerImpl implements ModelService {
             }
             uniqueIds.addAll(modelMapper.selectAll(organID));
         }
-        uniqueIds.addAll(modelMapper.selectAllByUserId(userId));
         return new ArrayList<>(uniqueIds);
     }
-
-
 
 }
 

@@ -12,5 +12,4 @@ public class DatasetDeleteDTO implements Serializable {
     private Long id;
 
     private List<Long> ids = new ArrayList<>();
-
 }
