@@ -14,7 +14,7 @@ public interface OrganService extends IService<Organization> {
 
     Result<String> status(Integer status, Long userId, Long organId);
 
-    Result<String> deleteOrganUser(String organId, String userId);
+    Result<String> deleteOrganUser(Long organId, Long userId);
 
-    Result<String> deleteOrgan(String organId);
+    Result<String> deleteOrgan(Long organId);
 }

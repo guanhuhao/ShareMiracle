@@ -64,7 +64,7 @@ public class OrganController {
      * @return
      */
     @DeleteMapping("/delete/user")
-    public Result<String> deleteOrganUser(String organId, String userId){
+    public Result<String> deleteOrganUser(Long organId, Long userId){
         return organService.deleteOrganUser(organId, userId);
     }
 
@@ -74,7 +74,7 @@ public class OrganController {
      * @return
      */
     @DeleteMapping("/delete")
-    public Result<String> deleteOrgan(String organId){
+    public Result<String> deleteOrgan(Long organId){
         return organService.deleteOrgan(organId);
     }
 
