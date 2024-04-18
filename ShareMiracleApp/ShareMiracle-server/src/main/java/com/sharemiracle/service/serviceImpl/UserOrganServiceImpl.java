@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserOrganServiceImpl extends ServiceImpl<UserOrganMapper, UserOrgan> implements UserOrganService {
-
+    // 在这里实现接口中的方法
 }

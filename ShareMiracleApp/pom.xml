@@ -18,7 +18,8 @@
         <module>ShareMiracle-server</module>
     </modules>
     <properties>
-        <mybatis-plus>3.5.3.1</mybatis-plus>
+        <mybatis-plus>3.5.2</mybatis-plus>
+        <hutool>5.8.26</hutool>
         <lombok>1.18.20</lombok>
         <fastjson>1.2.76</fastjson>
         <commons.lang>2.6</commons.lang>
@@ -42,7 +43,7 @@
             <!-- mybatis-plus-->
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus</artifactId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus}</version>
             </dependency>
 
@@ -155,6 +156,12 @@
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>${poi}</version>
+            </dependency>
+            <!-- hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

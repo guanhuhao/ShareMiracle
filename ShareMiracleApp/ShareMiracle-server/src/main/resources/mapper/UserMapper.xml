@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sharemiracle.mapper.UserMapper">
+
+    <!-- 插入用户记录 -->
+    <insert id="insert" parameterType="com.sharemiracle.entity.User">
+        INSERT INTO t_user
+        (name, username, email, logo_url, create_time, sex, phone, password, authority, status)
+        VALUES
+            (#{name}, #{username}, #{email}, #{logoUrl}, #{createTime}, #{sex}, #{phone}, #{password}, #{authority}, #{status})
+    </insert>
+
+<!--    &lt;!&ndash; 分页查询 &ndash;&gt;-->
+<!--    <select id = "pageQuery" resultType="com.sharemiracle.entity.User">-->
+<!--        select * from user-->
+<!--        <where>-->
+<!--            &lt;!&ndash; 查询姓名如果为空 则搜索所有权限低于自己的用户信息（0为管理员，1为普通用户）否则模糊查询姓名且权限低于自己的用户信息&ndash;&gt;-->
+<!--            -->
+<!--        </where>-->
+<!--    </select>-->
+</mapper>
