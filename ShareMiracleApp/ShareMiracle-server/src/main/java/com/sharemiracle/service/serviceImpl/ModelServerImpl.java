@@ -1,5 +1,6 @@
 package com.sharemiracle.service.serviceImpl;
 
+import com.sharemiracle.context.BaseContext;
 import com.sharemiracle.dto.ModelDTO;
 import com.sharemiracle.dto.ModelDataOrganDTO;
 import com.sharemiracle.dto.ModelDataQueryDTO;
@@ -63,9 +64,8 @@ public class ModelServerImpl implements ModelService {
      */
     @Override
     public void deleteBatch(ModelIdsDTO modelIdsDTO) {
-        // 通过token获得删除者id
-        //Long userId = BaseContext.getCurrentId();
-        Long userId = 1L;
+        // 获得删除者id
+        Long userId = BaseContext.getCurrentId();
         String idsString = modelIdsDTO.getModelId();
         List<String> idss = Arrays.asList(idsString.split(","));
         List<Long>ids = new ArrayList<>();
@@ -94,9 +94,8 @@ public class ModelServerImpl implements ModelService {
         //更新时间
         model.setUpdateTime(LocalDateTime.now());
 
-        // 通过token获得修改者id
-        //Long userId = BaseContext.getCurrentId();
-        Long userId = 1L;
+        // 获得修改者id
+        Long userId = BaseContext.getCurrentId();
 
 
         Long buildId = modelMapper.getUseridbyId(model.getId());
@@ -114,9 +113,8 @@ public class ModelServerImpl implements ModelService {
     @Override
     public Result updateStatus(Boolean status, Long id) {
 
-        // 通过token获得修改者id
-        //Long userId = BaseContext.getCurrentId();
-        Long userId = 1L;
+        // 获得修改者id
+        Long userId = BaseContext.getCurrentId();
         Long onerId = modelMapper.getUseridbyId(id);
         Integer au = modelMapper.getauByid(userId,id);
 
@@ -134,8 +132,7 @@ public class ModelServerImpl implements ModelService {
      * 5.修改模型有权使用组织
      */
     public void updateDatasetOrgan(ModelDataOrganDTO modelDataOrganDTO) {
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 1L;
+        Long userId = BaseContext.getCurrentId();
         Long datasetId = modelDataOrganDTO.getModelDataId();
         Long auth = modelMapper.selectAuthorityById(datasetId);
         if(!Objects.equals(auth, userId)){
@@ -159,8 +156,7 @@ public class ModelServerImpl implements ModelService {
      * 7.查询当前用户有权使用的所有模型
      */
     public List<Long> selectAll() {
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 1L;
+        Long userId = BaseContext.getCurrentId();
 
         List<Long> organIDs = modelMapper.selectOrganId(userId);
         Set<Long> uniqueIds = new HashSet<>();

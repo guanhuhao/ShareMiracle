@@ -43,20 +43,12 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
 
         //1、从请求头中获取令牌
         String token = request.getHeader(jwtProperties.getUserTokenName());
-//        String token = request.getHeader("authorization");
-        // authorization = Bearer eyJhbGciOi ....
-//        if (token != null && token.startsWith("Bearer ")) {
-//            token = token.substring(7); // 去掉"Bearer "这7个字符
-//
-//        }
+
 
         //2、校验令牌
         try {
             Enumeration<String> headerNames = request.getHeaderNames();
-//            while (headerNames.hasMoreElements()) {
-//                String headerName = headerNames.nextElement();
-//                log.info("Header: {} = {}", headerName, request.getHeader(headerName));
-//            }
+
             log.info("jwt校验:{}", token);
             Claims claims = JwtUtil.parseJWT(jwtProperties.getUserSecretKey(), token);
             Long userId = Long.valueOf(claims.get(JwtClaimsConstant.USER_ID).toString());

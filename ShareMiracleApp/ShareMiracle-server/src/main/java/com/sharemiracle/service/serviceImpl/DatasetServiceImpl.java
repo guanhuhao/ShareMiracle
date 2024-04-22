@@ -31,8 +31,7 @@ public class DatasetServiceImpl implements DatasetService {
 
         dataset.setCreateTime(LocalDateTime.now());
         dataset.setUpdateTime(LocalDateTime.now());
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 123456L;
+        Long userId = BaseContext.getCurrentId();
         dataset.setUserId(userId);
 
         datasetMapper.insert(dataset);
@@ -51,8 +50,7 @@ public class DatasetServiceImpl implements DatasetService {
 
     @Override
     public void delete(DatasetDeleteDTO datasetDeleteDTO) {
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 123456L;
+         Long userId = BaseContext.getCurrentId();
         Long id = datasetDeleteDTO.getId();
 
         Long auth = datasetMapper.selectAuthorityById(id);
@@ -85,8 +83,7 @@ public class DatasetServiceImpl implements DatasetService {
 
         dataset.setUpdateTime(LocalDateTime.now());
 
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 123456L;
+        Long userId = BaseContext.getCurrentId();
         Long datasetId = dataset.getId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
 
@@ -106,8 +103,7 @@ public class DatasetServiceImpl implements DatasetService {
 
         dataset.setUpdateTime(LocalDateTime.now());
 
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 123456L;
+        Long userId = BaseContext.getCurrentId();
         Long datasetId = dataset.getId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
 
@@ -121,8 +117,7 @@ public class DatasetServiceImpl implements DatasetService {
 
     @Override
     public void updateDatasetOrgan(DatasetOrganDTO datasetOrganDTO) {
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 123456L;
+        Long userId = BaseContext.getCurrentId();
         Long datasetId = datasetOrganDTO.getDatasetId();
         Long auth = datasetMapper.selectAuthorityById(datasetId);
         if(!Objects.equals(auth, userId)){
@@ -142,8 +137,7 @@ public class DatasetServiceImpl implements DatasetService {
 
     @Override
     public List<Long> selectAll() {
-        // Long userId = BaseContext.getCurrentId();
-        Long userId = 123456L;
+        Long userId = BaseContext.getCurrentId();
 
         List<Long> organIDs = datasetMapper.selectOrganId(userId);
         Set<Long> uniqueIds = new HashSet<>();

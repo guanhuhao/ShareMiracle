@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 组织实体类
  */
-@ Data
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

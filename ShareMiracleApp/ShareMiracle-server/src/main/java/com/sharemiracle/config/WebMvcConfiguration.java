@@ -39,8 +39,11 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
                 .excludePathPatterns("/user") // 排除注册
                 .excludePathPatterns("/user/login") // 排除登录
                 // 拦截组织模块
-                .addPathPatterns("/organ/**");
-                
+                .addPathPatterns("/organ/**")
+                // 拦截模型数据模块
+                .addPathPatterns("/model/**")
+                // 拦截数据集信息模块
+                .addPathPatterns("/dataset/**");
                 // TODO:其他模块-拦截或放行-路径
     }
 

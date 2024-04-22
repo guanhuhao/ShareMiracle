@@ -2,13 +2,13 @@ server:
   port: 8080
 spring:
   profiles:
-    active: dev
+    active: lab
   main:
     allow-circular-references: true
   datasource:
     druid:
       driver-class-name: ${miracle.datasource.driver-class-name}
-      url: jdbc:mysql://${miracle.datasource.host}:3306/share_miracle?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+      url: jdbc:mysql://${miracle.datasource.host}:${miracle.datasource.port}/share_miracle?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
       username: ${miracle.datasource.username}
       password: ${miracle.datasource.password}
   redis:
@@ -70,6 +70,6 @@ logging:
 
 share-miracle.jwt:
   userSecretKey: gcsj_miracle_share_user_secret_key
-  userTtl: 7200000  # 例如用户token有效时间为2小时 单位:毫秒
+  userTtl: 20000  # 例如用户token有效时间为2小时 单位:毫秒
   userTokenName: authorization
 
