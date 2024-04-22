@@ -27,7 +27,6 @@ public class OrganServiceImpl extends ServiceImpl<OrganMapper, Organization> imp
     @Resource
     private UserService userService;
 
-    @Resource
 
     /**
      * 新建组织
