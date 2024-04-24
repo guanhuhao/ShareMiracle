@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="993060e8-531b-4773-b832-7b7493d8e4d1" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/gcsj-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/constant/JwtClaimsConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/constant/JwtClaimsConstant.java" afterDir="false" />
+    <list default="true" id="993060e8-531b-4773-b832-7b7493d8e4d1" name="更改" comment="更改">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/gcsj-demo02._51E-w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/gcsj.M1QwAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/json/JacksonObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/json/JacksonObjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/properties/JwtProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/properties/JwtProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-pojo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-server/src/main/java/com/sharemiracle/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-server/src/main/java/com/sharemiracle/config/WebMvcConfiguration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,42 +54,48 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2eXNiqZxvSeEWSVnmBZ38Wqz8yo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "E:/gcsj/ShareMiracle/ShareMiracleApp",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ShareMiracleApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/gcsj/ShareMiracle/ShareMiracleApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\gcsj\ShareMiracle\gcsj-server\src\main\resources\http" />
@@ -90,11 +107,11 @@
       <recent name="org.example.config" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP 请求.User-test | #2">
-    <configuration name="User-test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/gcsj-server/src/main/resources/http/User-test.http" requestIdentifier="#1" runType="运行单个请求">
+  <component name="RunManager" selected="Spring Boot.ShareMiracleApplication">
+    <configuration name="User-test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/gcsj-server/src/main/resources/http/User-test.http" requestIdentifier="#1">
       <method v="2" />
     </configuration>
-    <configuration name="User-test | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/gcsj-server/src/main/resources/http/User-test.http" index="2" requestIdentifier="#2" runType="运行单个请求">
+    <configuration name="User-test | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/gcsj-server/src/main/resources/http/User-test.http" index="2" requestIdentifier="#2">
       <method v="2" />
     </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -110,11 +127,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShareMiracleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ShareMiracle-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sharemiracle.ShareMiracleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP 请求.User-test | #2" />
         <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="HTTP 请求.User-test | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -132,10 +154,16 @@
       <workItem from="1712502012457" duration="128000" />
       <workItem from="1712553431329" duration="2535000" />
       <workItem from="1712637622940" duration="2207000" />
+      <workItem from="1713794426415" duration="75000" />
+      <workItem from="1713929783767" duration="682000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update initial sql(add DELETE CASCADE PDATE CASCADE)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update initial sql(add DELETE CASCADE PDATE CASCADE)" />
   </component>
 </project>
