@@ -49,12 +49,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public Result<String> register(UserDTO userDTO) {
-        // 校验手机号格式是否正确
-        String phone = userDTO.getPhone();
-        if (!Validator.isMobile(phone)) {
-            // 格式不正确，返回错误信息
-            return Result.error("手机号格式不正确");
-        }
+        // // 校验手机号格式是否正确
+        // String phone = userDTO.getPhone();
+        // if (!Validator.isMobile(phone)) {
+        //     // 格式不正确，返回错误信息
+        //     return Result.error("手机号格式不正确");
+        // }
+
+        
         // 检查数据库中是否存在该用户名
         // TODO: 用户名唯一性的后端校验 可采用Redis集合优化 UNIQUE KEY判断  先查再增
         String username = userDTO.getUsername();
@@ -74,9 +76,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setPassword(DigestUtil.md5Hex(userDTO.getPassword()));
 
         // 设置未从DTO拷贝的其余属性
-        user.setCreateTime(LocalDateTime.now()); // 设置当前时间为注册时间
-        user.setAuthority(1); // 设置默认权限为普通用户
-        user.setStatus(1); // 设置默认状态为可用
+        user.setCreateTime(LocalDateTime.now());   // 设置当前时间为注册时间
+        user.setAuthority(1);            // 设置默认权限为普通用户
+        user.setStatus(1);                  // 设置默认状态为可用
 
         // 使用 Redis 分布式锁在高并发环境下避免对同一个用户名进行注册, 顺便进行用户名唯一性校验
         String lockKey = LOCK_USERNAME + username;
