@@ -1,6 +1,6 @@
 package com.sharemiracle.service.serviceImpl;
 
-import cn.hutool.core.lang.Validator;
+// import cn.hutool.core.lang.Validator;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.digest.DigestUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -19,6 +19,8 @@ import com.sharemiracle.result.Result;
 import com.sharemiracle.service.UserService;
 import com.sharemiracle.utils.JwtUtil;
 import com.sharemiracle.vo.UserLoginVO;
+
+import lombok.val;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.sharemiracle.constant.RedisConstant.*;
 
@@ -43,6 +47,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Resource
     private JwtProperties jwtProperties;
+
+    private Pattern emailPattern = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
 
     @Autowired
     private UserMapper userMapper;
@@ -56,14 +62,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //     return Result.error("手机号格式不正确");
         // }
 
-        
-        // 检查数据库中是否存在该用户名
-        // TODO: 用户名唯一性的后端校验 可采用Redis集合优化 UNIQUE KEY判断  先查再增
         String username = userDTO.getUsername();
-//        int count = Math.toIntExact(baseMapper.selectCount(new QueryWrapper<User>().eq("username", username)));
-//        if (count > 0) {
-//            return Result.error("该用户名已被占用");
-//        }
+        Boolean valid = isValidEmail(username);
+        if (!valid) {
+            return Result.error("该用户名已被占用");
+        }
 
         User user = new User();
 
@@ -174,6 +177,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
     }
 
+    @Override
+    public Result<Boolean> checkEmail(String email) {
+        Boolean valid = isValidEmail(email);
+        return Result.success(valid);
+    }
 
     private Integer parseGender(String genderStr) {
         if ("男".equalsIgnoreCase(genderStr)) {
@@ -206,5 +214,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private boolean isTokenValid(String token) {
         String key = AUTH_TOKEN + token; // 使用相同的前缀
         return Boolean.TRUE.equals(stringRedisTemplate.hasKey(key));
+    }
+
+    // 检查 email 是否合法 & 是否被注册
+    private boolean isValidEmail(String username) {
+        Matcher matcher = emailPattern.matcher(username);
+        if (!matcher.matches()) {
+            return false;
+        }
+
+        // 检查数据库中是否存在该用户名
+        // TODO: 用户名唯一性的后端校验 可采用Redis集合优化 UNIQUE KEY判断  先查再增
+        int count = Math.toIntExact(baseMapper.selectCount(new QueryWrapper<User>().eq("username", username)));
+        // 被注册返回 false
+        return count == 0;
     }
 }

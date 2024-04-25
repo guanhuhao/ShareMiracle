@@ -160,4 +160,15 @@ public class UserController {
         log.info("用户修改密码, id: {}", userPwdModDTO.getUserId());
         return userInfoService.modifyUserPassword(userPwdModDTO);
     }
+
+    /**
+     * 检测邮箱有效性
+     * @param email
+     * @return
+     */
+    @GetMapping("/validEmail")
+    @ApiOperation("查询当前邮箱是否有效")
+    public Result<Boolean> userValidEmail(@RequestParam("email") String email) {
+        return userService.checkEmail(email);
+    }
 }

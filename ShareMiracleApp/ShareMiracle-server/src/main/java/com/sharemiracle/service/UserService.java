@@ -21,4 +21,6 @@ public interface UserService extends IService<User> {
     Result<UserLoginVO> login(UserLoginDTO userLoginDTO);
 
     Result<String> logout(String token);
+
+    Result<Boolean> checkEmail(String email);
 }
