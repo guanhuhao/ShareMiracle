@@ -59,7 +59,7 @@ public class UserController {
         log.info("用户登录：{}", userLoginDTO.getUsername());
         try {
             Result<UserLoginVO> resultVO = userService.login(userLoginDTO);
-            resultVO.setMsg("登录成功");
+            resultVO.setMsg("login.success");
             return resultVO;
         } catch (Exception e) {
             return Result.error(MessageConstant.LOGIN_FAILED);
