@@ -3,6 +3,7 @@ package com.sharemiracle.service.serviceImpl;
 // import cn.hutool.core.lang.Validator;
 import cn.hutool.crypto.SecureUtil;
 import cn.hutool.crypto.digest.DigestUtil;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -20,7 +21,6 @@ import com.sharemiracle.service.UserService;
 import com.sharemiracle.utils.JwtUtil;
 import com.sharemiracle.vo.UserLoginVO;
 
-import lombok.val;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,9 +63,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // }
 
         String username = userDTO.getUsername();
-        Boolean valid = isValidEmail(username);
-        if (!valid) {
-            return Result.error("该用户名已被占用");
+        Result<Boolean> validResult = checkEmail(username);
+        if (!validResult.getData()) {
+            return Result.error(validResult.getMsg());
         }
 
         User user = new User();
@@ -88,20 +88,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         try {
             Boolean lockAcquired = stringRedisTemplate.opsForValue().setIfAbsent(lockKey, "locked", 10, TimeUnit.SECONDS);
             if (lockAcquired == null || !lockAcquired) {
-                return Result.error("该用户名注册流程处理中，请稍后重试");
+                return Result.error("signup.process.wait-retry");
             }
             boolean isSaveCompleted = save(user);
             if (!isSaveCompleted) {
-                return Result.error("注册失败");
+                return Result.error("signup.error.fail-to-register");
             }
         } catch (Exception e) {
             log.error("注册用户失败", e);
-            return Result.error("服务器错误");
+            return Result.error("server.server-error");
         } finally {
             stringRedisTemplate.delete(lockKey);
         }
 
-        return Result.success("注册成功");
+        return Result.success("signup.success");
     }
 
     @Override
@@ -171,16 +171,29 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (token != null) {
             stringRedisTemplate.delete(AUTH_TOKEN + token);
             log.info("用户登出，令牌：{}", token);
-            return Result.success("已成功退出登录");
+            return Result.success("logout.sucess.exit");
         } else {
-            return Result.success("登出请求无效");
+            return Result.success("logout.invalid-logout");
         }
     }
 
     @Override
     public Result<Boolean> checkEmail(String email) {
         Boolean valid = isValidEmail(email);
-        return Result.success(valid);
+        if (!valid) {
+            Result<Boolean> result = Result.success(false);
+            result.setMsg("login.email-address.validate.error.invalid-address");
+            return result;
+        }
+
+        Boolean taken = hasBeenRegister(email);
+        if (taken) {
+            Result<Boolean> result = Result.success(false);
+            result.setMsg("signup.repeat-email");
+            return result;
+        } 
+
+        return Result.success(true);
     }
 
     private Integer parseGender(String genderStr) {
@@ -219,14 +232,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     // 检查 email 是否合法 & 是否被注册
     private boolean isValidEmail(String username) {
         Matcher matcher = emailPattern.matcher(username);
-        if (!matcher.matches()) {
-            return false;
-        }
+        return matcher.matches();
+    }
 
+    private boolean hasBeenRegister(String username) {
         // 检查数据库中是否存在该用户名
         // TODO: 用户名唯一性的后端校验 可采用Redis集合优化 UNIQUE KEY判断  先查再增
         int count = Math.toIntExact(baseMapper.selectCount(new QueryWrapper<User>().eq("username", username)));
         // 被注册返回 false
-        return count == 0;
+        return count > 0;
     }
 }
