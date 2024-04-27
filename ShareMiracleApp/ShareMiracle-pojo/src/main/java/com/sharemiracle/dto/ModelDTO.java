@@ -1,7 +1,7 @@
 package com.sharemiracle.dto;
 
 import com.sharemiracle.entity.Organization;
-import com.sharemiracle.entity.User;
+// import com.sharemiracle.entity.User;
 import lombok.Data;
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -15,9 +15,9 @@ public interface ModelService {
 
     void deleteBatch(ModelIdsDTO modelIdsDTO);
 
-    Result update(ModelDTO modelDTO);
+    Result<String> update(ModelDTO modelDTO);
 
-    Result updateStatus(Boolean status, Long id);
+    Result<String> updateStatus(Boolean status, Long id);
 
     void updateDatasetOrgan(ModelDataOrganDTO modelDataOrganDTO);
 

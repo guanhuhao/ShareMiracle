@@ -1,11 +1,11 @@
 package com.sharemiracle.dto;
 
-import com.sharemiracle.entity.Organization;
+// import com.sharemiracle.entity.Organization;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+// import java.util.ArrayList;
+// import java.util.List;
 
 
 @Data

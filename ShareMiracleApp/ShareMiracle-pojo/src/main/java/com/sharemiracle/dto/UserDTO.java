@@ -20,7 +20,7 @@ public class UserDTO implements Serializable {
     /**
      * 用户头像url
      */
-    private String logoUrl;
+    private String logoUrl = "";
     /**
      * 姓名
      */
@@ -34,11 +34,11 @@ public class UserDTO implements Serializable {
     /**
      * 电话号码
      */
-    private String phone;
+    private String phone = "";
     /**
      * 性别
      */
-    private String sex;
+    private String sex = "";
     /**
      * 用户名（凭证 唯一）
      */

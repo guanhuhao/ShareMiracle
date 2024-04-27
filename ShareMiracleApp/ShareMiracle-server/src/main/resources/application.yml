@@ -70,6 +70,6 @@ logging:
 
 share-miracle.jwt:
   userSecretKey: gcsj_miracle_share_user_secret_key
-  userTtl: 20000  # 例如用户token有效时间为2小时 单位:毫秒
-  userTokenName: authorization
+  userTtl: 2592000000   # 例如用户token有效时间为一个月 单位:毫秒
+  userTokenName: Authorization
 

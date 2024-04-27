@@ -11,10 +11,13 @@ import com.sharemiracle.result.PageResult;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.UserInfoService;
 import com.sharemiracle.service.UserService;
+// import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
+
+// import cn.hutool.http.server.HttpServerRequest;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.aspectj.weaver.patterns.IToken;
+// import org.aspectj.weaver.patterns.IToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -59,7 +62,6 @@ public class UserController {
         log.info("用户登录：{}", userLoginDTO.getUsername());
         try {
             Result<UserLoginVO> resultVO = userService.login(userLoginDTO);
-            resultVO.setMsg("login.success");
             return resultVO;
         } catch (Exception e) {
             return Result.error(MessageConstant.LOGIN_FAILED);
@@ -170,5 +172,14 @@ public class UserController {
     @ApiOperation("查询当前邮箱是否有效")
     public Result<Boolean> userValidEmail(@RequestParam("email") String email) {
         return userService.checkEmail(email);
+    }
+
+    /**
+     * 获取用户的信息
+     */
+    @GetMapping("/userInfo")
+    @ApiOperation("获取用户的个人信息")
+    public Result<String> userInfo(@RequestHeader("Authorization") String token) {
+        return userService.userInfo(token);
     }
 }

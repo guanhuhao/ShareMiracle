@@ -88,7 +88,7 @@ public class ModelServerImpl implements ModelService {
      * 3.修改模型数据
      * */
     @Override
-    public Result update(ModelDTO modelDTO) {
+    public Result<String> update(ModelDTO modelDTO) {
         Model model = new Model();
         BeanUtils.copyProperties(modelDTO,model);
         //更新时间
@@ -111,7 +111,7 @@ public class ModelServerImpl implements ModelService {
      * 4.修改模型状态
      * */
     @Override
-    public Result updateStatus(Boolean status, Long id) {
+    public Result<String> updateStatus(Boolean status, Long id) {
 
         // 获得修改者id
         Long userId = BaseContext.getCurrentId();
