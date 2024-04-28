@@ -71,5 +71,6 @@ logging:
 share-miracle.jwt:
   userSecretKey: gcsj_miracle_share_user_secret_key
   userTtl: 2592000000   # 例如用户token有效时间为一个月 单位:毫秒
+  redisTtl: 20000       # redis 中 key 的有效时间，过期时间为 一个月
   userTokenName: Authorization
 

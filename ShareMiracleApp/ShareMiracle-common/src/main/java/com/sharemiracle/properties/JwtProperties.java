@@ -13,6 +13,6 @@ public class JwtProperties {
      */
     private String userSecretKey;
     private long userTtl;
+    private long redisTtl;
     private String userTokenName;
-
 }

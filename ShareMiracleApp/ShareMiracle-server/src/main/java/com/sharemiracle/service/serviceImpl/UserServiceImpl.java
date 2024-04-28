@@ -20,7 +20,7 @@ import com.sharemiracle.properties.JwtProperties;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.UserService;
 import com.sharemiracle.utils.JwtUtil;
-// import com.sharemiracle.vo.UserInfoVO;
+import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -240,22 +240,24 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     // 在UserService中添加一个方法来存储JWT到Redis
     private void storeTokenInRedis(String token, User user) {
-        String key = AUTH_TOKEN + token; // 一个常量，例如"auth:token:"
-        long ttl = jwtProperties.getUserTtl(); // 从配置中获取JWT的有效期
+        String key = AUTH_TOKEN + token;            // 一个常量，例如"auth:token:"
+        long ttl = jwtProperties.getRedisTtl();     // 从配置中获取JWT的有效期
+
         // 转换过期时间为秒
         long ttlInSeconds = TimeUnit.MILLISECONDS.toSeconds(ttl);
 
         Map<String, String> userDetails = new HashMap<>();
         userDetails.put("userId", user.getId().toString());
-        userDetails.put("username", user.getUsername());
+        userDetails.put("email", user.getEmail());
+        userDetails.put("logoUrl", user.getLogoUrl());
 
         // 将用户信息转换为JSON字符串
         String userDetailsJson = new Gson().toJson(userDetails);
 
         // 设置键的过期时间为配置中的userTtl
         stringRedisTemplate.opsForValue().set(key, userDetailsJson, ttlInSeconds, TimeUnit.SECONDS);
+        log.info("存储进入 redis, key 为 {}, 有效时间 {} ms", key, ttl);
     }
-
     // 检查令牌是否有效
     // private boolean isTokenValid(String token) {
     //     String key = AUTH_TOKEN + token; // 使用相同的前缀
