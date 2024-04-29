@@ -11,7 +11,7 @@ import com.sharemiracle.result.PageResult;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.UserInfoService;
 import com.sharemiracle.service.UserService;
-// import com.sharemiracle.vo.UserInfoVO;
+import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
 
 // import cn.hutool.http.server.HttpServerRequest;
@@ -179,7 +179,7 @@ public class UserController {
      */
     @GetMapping("/userInfo")
     @ApiOperation("获取用户的个人信息")
-    public Result<String> userInfo(@RequestHeader("Authorization") String token) {
+    public Result<UserInfoVO> userInfo(@RequestHeader("Authorization") String token) {
         return userService.userInfo(token);
     }
 }

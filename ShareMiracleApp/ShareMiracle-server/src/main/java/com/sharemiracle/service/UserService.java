@@ -5,7 +5,7 @@ import com.sharemiracle.dto.UserDTO;
 import com.sharemiracle.dto.UserLoginDTO;
 import com.sharemiracle.entity.User;
 import com.sharemiracle.result.Result;
-// import com.sharemiracle.vo.UserInfoVO;
+import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
 
 public interface UserService extends IService<User> {
@@ -19,7 +19,7 @@ public interface UserService extends IService<User> {
 
     Result<UserLoginVO> login(UserLoginDTO userLoginDTO);
 
-    Result<String> userInfo(String token);
+    Result<UserInfoVO> userInfo(String token);
 
     Result<String> logout(String token);
 

@@ -20,7 +20,7 @@ import com.sharemiracle.properties.JwtProperties;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.UserService;
 import com.sharemiracle.utils.JwtUtil;
-// import com.sharemiracle.vo.UserInfoVO;
+import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
 
 import lombok.extern.slf4j.Slf4j;
@@ -214,19 +214,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public Result<String> userInfo(String token) {
+    public Result<UserInfoVO> userInfo(String token) {
         Claims claims = JwtUtil.parseJWT(jwtProperties.getUserSecretKey(), token);
         Long userId = Long.valueOf(claims.get(JwtClaimsConstant.USER_ID).toString());
         User user = userService.getById(userId);
 
-        // UserInfoVO userInfo = new UserInfoVO(
-        //     userId,
-        //     user.getName(),
-        //     user.getEmail(),
-        //     user.getLogoUrl(),
-        //     token
-        // );
-        return Result.success(user.getName());
+        UserInfoVO userInfo = new UserInfoVO(
+            userId,
+            user.getName(),
+            user.getEmail(),
+            user.getLogoUrl(),
+            token
+        );
+        return Result.success(userInfo);
     }
 
     private Integer parseGender(String genderStr) {
