@@ -5,9 +5,8 @@ import com.sharemiracle.dto.UserDTO;
 import com.sharemiracle.dto.UserLoginDTO;
 import com.sharemiracle.entity.User;
 import com.sharemiracle.result.Result;
+import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
-
-import javax.servlet.http.HttpServletRequest;
 
 public interface UserService extends IService<User> {
     /**
@@ -20,5 +19,10 @@ public interface UserService extends IService<User> {
 
     Result<UserLoginVO> login(UserLoginDTO userLoginDTO);
 
+    Result<UserInfoVO> userInfo(String token);
+
     Result<String> logout(String token);
+
+    Result<Boolean> checkEmail(String email);
+
 }

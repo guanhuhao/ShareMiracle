@@ -43,6 +43,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
                 .addPathPatterns("/user/**")
                 .excludePathPatterns("/user") // 排除注册
                 .excludePathPatterns("/user/login") // 排除登录
+                .excludePathPatterns("/user/validEmail") // 排除 email 验证接口
                 // 拦截组织模块
                 .addPathPatterns("/organ/**")
                 // 拦截模型数据模块

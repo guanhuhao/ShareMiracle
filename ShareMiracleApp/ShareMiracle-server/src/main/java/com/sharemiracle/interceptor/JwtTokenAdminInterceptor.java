@@ -13,7 +13,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Enumeration;
+// import java.util.Enumeration;
 
 /**
  * jwt令牌校验的拦截器
@@ -44,20 +44,18 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
         //1、从请求头中获取令牌
         String token = request.getHeader(jwtProperties.getUserTokenName());
 
-
         //2、校验令牌
         try {
-            Enumeration<String> headerNames = request.getHeaderNames();
-
-            log.info("jwt校验:{}", token);
+            // Enumeration<String> headerNames = request.getHeaderNames();
             Claims claims = JwtUtil.parseJWT(jwtProperties.getUserSecretKey(), token);
             Long userId = Long.valueOf(claims.get(JwtClaimsConstant.USER_ID).toString());
             log.info("校验通过，当前用户id：{}", userId);
+
             //3、通过，放行
             return true;
         } catch (Exception ex) {
             //4、不通过，响应401状态码
-            log.info("校验不通过");
+            log.info("校验不通过, 原因: {}", ex.toString());
             response.setStatus(401);
             return false;
         }
