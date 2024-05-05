@@ -175,7 +175,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public Result<String> logout(@RequestHeader("Authorization") String token) {
+    public Result<String> logout(String token) {
 //        // 请求头中获取JWT令牌
 //        String token = request.getHeader(jwtProperties.getUserTokenName());
 //        if (token != null) {
@@ -189,9 +189,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (token != null) {
             stringRedisTemplate.delete(AUTH_TOKEN + token);
             log.info("用户登出，令牌：{}", token);
-            return Result.success(MessageConstant.LOGIN_SUCCESS);
+            return Result.success(MessageConstant.LOGOUT_SUCCESS);
         } else {
-            return Result.success(MessageConstant.LOGIN_FAILED);
+            return Result.success(MessageConstant.LOGOUT_FAILED);
         }
     }
 

@@ -34,7 +34,7 @@ public class MessageConstant {
     public static final String SIGNUP_FAILED = "signup.error.fail-to-register";
     public static final String SIGNUP_PROCESS_WAIT = "signup.process.wait-retry";
 
-    public static final String LOGOUT_SUCCESS = "logout.sucess.exit";
+    public static final String LOGOUT_SUCCESS = "logout.success.exit";
     public static final String LOGOUT_FAILED = "logout.invalid-logout";
 
     public static final String UPLOAD_FAILED = "文件上传失败";

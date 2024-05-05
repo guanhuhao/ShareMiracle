@@ -75,7 +75,7 @@ public class UserController {
      */
     @PostMapping("/logout")
     @ApiOperation("用户登出")
-    public Result<String> userLogout(String token) {
+    public Result<String> userLogout(@RequestHeader("Authorization") String token) {
         return userService.logout(token);
     }
 
