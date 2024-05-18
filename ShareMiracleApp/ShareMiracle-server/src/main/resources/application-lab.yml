@@ -13,8 +13,8 @@ miracle:
   elasticsearch:
     host: 172.16.120.234
     port: 9200
-    username: logadmin
-    password: gcsj1234
+    username: elastic
+    password: 123456
   kafka:
     host: 172.16.120.234
     port: 9092
