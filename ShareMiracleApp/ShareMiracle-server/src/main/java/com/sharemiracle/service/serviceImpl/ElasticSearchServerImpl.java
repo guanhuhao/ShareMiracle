@@ -1,19 +1,13 @@
 package com.sharemiracle.service.serviceImpl;
 
-import cn.hutool.core.collection.AvgPartition;
-import co.elastic.clients.elasticsearch._types.query_dsl.MatchQuery;
-import co.elastic.clients.elasticsearch._types.query_dsl.Query;
 import co.elastic.clients.elasticsearch.core.SearchResponse;
 import co.elastic.clients.elasticsearch.core.search.Hit;
 import com.sharemiracle.constant.MessageConstant;
 import com.sharemiracle.dto.*;
-import com.sharemiracle.entity.User;
 import com.sharemiracle.mapper.ElasticSearchMapper;
 import com.sharemiracle.result.Result;
-import com.sharemiracle.result.SearchResult;
 import com.sharemiracle.service.ElasticSearchService;
 import com.sharemiracle.vo.EsSearchVO;
-import com.sharemiracle.vo.UserLoginVO;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,16 +16,9 @@ import java.io.IOException;
 import java.util.*;
 
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
-import co.elastic.clients.elasticsearch.indices.GetIndexResponse;
+import lombok.extern.slf4j.Slf4j;
 
-//public class Item {
-//    private String datatype;
-//    private String modal;
-//    private String task;
-//    private String tag;
-//    private String query;
-//}
-
+@Slf4j
 @Service
 public class ElasticSearchServerImpl implements ElasticSearchService {
 
@@ -46,13 +33,13 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
      */
     @Override
     public Result<EsSearchVO> search(SearchDTO searchDTO) throws IOException {
+        // 解析前端DTO
         List<String> dataTypes = searchDTO.getDatatype();
         List<String> modals = searchDTO.getModal();
         List<String> tags = searchDTO.getTag();
 
-//        String tagBuilder;
+        //构建查询语句关键词
         StringBuilder tagBuilder = new StringBuilder();
-
         for( String tag : dataTypes){
             tagBuilder.append(String.format("%s ",tag));
         }
@@ -62,12 +49,13 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
         for( String tag : tags){
             tagBuilder.append(String.format("%s ",tag));
         }
-
         tagBuilder.append(String.format("%s ",searchDTO.getQuery()));
 
         String query_keywords = tagBuilder.toString();
-        System.out.println("tags: " + query_keywords);
+        log.info("build query token:{}",query_keywords);
 
+        // 查询es数据库
+        // TODO: 实现分页查询
         SearchResponse<ElasticSearchItemDTO> searchResponse = esClient.search(s -> s.index("es")
                         .query(q -> q.match(t -> t
                                 .field("description")
@@ -76,8 +64,7 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
 
 
 
-        // 打印结果
-        System.out.println("Index information: " + searchResponse);
+        //解析查询结果
         List<Hit<ElasticSearchItemDTO>> hits = searchResponse.hits().hits();
         List<ElasticSearchItemDTO> results = new ArrayList<>();
         List<Double> scores = new ArrayList<>();
@@ -85,8 +72,9 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
             ElasticSearchItemDTO items = hit.source();
             results.add(items);
             scores.add(hit.score());
-//            System.out.println("找到产品 " + product.getSku() + "，得分 " + hit.score());
         }
+
+        // 构建前端视图
         EsSearchVO esSearchVO = new EsSearchVO(
                 hits.size(),
                 scores,
