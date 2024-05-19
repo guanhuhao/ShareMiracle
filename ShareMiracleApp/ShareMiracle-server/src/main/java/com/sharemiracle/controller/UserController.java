@@ -11,8 +11,8 @@ import com.sharemiracle.result.PageResult;
 import com.sharemiracle.result.Result;
 import com.sharemiracle.service.UserInfoService;
 import com.sharemiracle.service.UserService;
-import com.sharemiracle.vo.UserInfoVO;
 import com.sharemiracle.vo.UserLoginVO;
+import com.sharemiracle.vo.UserInfoVO;
 
 // import cn.hutool.http.server.HttpServerRequest;
 import io.swagger.annotations.ApiOperation;
@@ -75,7 +75,7 @@ public class UserController {
      */
     @PostMapping("/logout")
     @ApiOperation("用户登出")
-    public Result<String> userLogout(String token) {
+    public Result<String> userLogout(@RequestHeader("Authorization") String token) {
         return userService.logout(token);
     }
 

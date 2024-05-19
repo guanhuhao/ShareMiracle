@@ -101,20 +101,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         try {
             Boolean lockAcquired = stringRedisTemplate.opsForValue().setIfAbsent(lockKey, "locked", 10, TimeUnit.SECONDS);
             if (lockAcquired == null || !lockAcquired) {
-                return Result.error("signup.process.wait-retry");
+                return Result.error(MessageConstant.SIGNUP_PROCESS_WAIT);
             }
             boolean isSaveCompleted = save(user);
             if (!isSaveCompleted) {
-                return Result.error("signup.error.fail-to-register");
+                return Result.error(MessageConstant.SIGNUP_FAILED);
             }
         } catch (Exception e) {
             log.error("注册用户失败", e);
-            return Result.error("server.server-error");
+            return Result.error(MessageConstant.SERVER_ERROR);
         } finally {
             stringRedisTemplate.delete(lockKey);
         }
-
-        return Result.success("signup.success");
+        
+        return Result.success(MessageConstant.LOGIN_SUCCESS);
     }
 
     @Override
@@ -128,7 +128,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
 
         // 校验用户名是否存在，如果不存在直接返回“用户名或密码错误”
-        User user = userMapper.selectOne(new QueryWrapper<User>().eq("username", userLoginDTO.getUsername()));
+        User user = userMapper.selectOne(new QueryWrapper<User>().eq("username", username));
+                
         if (user == null) {
             return Result.error(MessageConstant.ACCOUNT_NOT_FOUND);
         }
@@ -169,12 +170,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         );
 
         Result<UserLoginVO> result = Result.success(userLoginVO);
-        result.setMsg("login.success");
+        result.setMsg(MessageConstant.LOGIN_SUCCESS);
         return result;
     }
 
     @Override
-    public Result<String> logout(@RequestHeader("Authorization") String token) {
+    public Result<String> logout(String token) {
 //        // 请求头中获取JWT令牌
 //        String token = request.getHeader(jwtProperties.getUserTokenName());
 //        if (token != null) {
@@ -188,9 +189,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (token != null) {
             stringRedisTemplate.delete(AUTH_TOKEN + token);
             log.info("用户登出，令牌：{}", token);
-            return Result.success("logout.sucess.exit");
+            return Result.success(MessageConstant.LOGOUT_SUCCESS);
         } else {
-            return Result.success("logout.invalid-logout");
+            return Result.success(MessageConstant.LOGOUT_FAILED);
         }
     }
 
@@ -199,14 +200,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         Boolean valid = isValidEmail(email);
         if (!valid) {
             Result<Boolean> result = Result.success(false);
-            result.setMsg("login.email-address.validate.error.invalid-address");
+            result.setMsg(MessageConstant.INVALID_EMAIL);
             return result;
         }
 
         Boolean taken = hasBeenRegister(email);
         if (taken) {
             Result<Boolean> result = Result.success(false);
-            result.setMsg("signup.repeat-email");
+            result.setMsg(MessageConstant.REPEAT_EMAIL);
             return result;
         } 
 
@@ -226,7 +227,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             user.getLogoUrl(),
             token
         );
-        return Result.success(userInfo);
+        Result<UserInfoVO> result = Result.success(userInfo);
+        result.setMsg(MessageConstant.LOGIN_SUCCESS);
+        return result;
     }
 
     private Integer parseGender(String genderStr) {

@@ -13,8 +13,10 @@ mvn clean install
 ### 编译运行后端
 
 ```bash
-cd ShareMiracleApp/ShareMiracle-server
-mvn compile && mvn spring-boot:run
+cd ShareMiracleApp
+mvn compile
+mvn package
+java -jar ShareMiracle-server/target/ShareMiracle-server-1.0-SNAPSHOT.jar
 ```
 
 ### 部署
@@ -22,7 +24,7 @@ mvn compile && mvn spring-boot:run
 ```bash
 cd ShareMiracleApp/ShareMiracle-server
 mvn clean package
-scp target/xxx ...
+scp ShareMiracle-server/target/ShareMiracle-server-1.0-SNAPSHOT.jar xxx@xxx:/xxx/
 ```
 
 ### 开发环境与部署环境
