@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public interface ElasticSearchService {
 
-    Result<EsSearchVO> search(SearchDTO searchDTO) throws IOException;
+    EsSearchVO search(SearchDTO searchDTO) throws IOException;
 
     void addItem(ElasticSearchItemDTO elasticSearchItemDTO);
 }

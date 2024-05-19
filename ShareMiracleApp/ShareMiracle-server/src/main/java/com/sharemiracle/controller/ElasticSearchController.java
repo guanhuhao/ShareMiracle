@@ -1,8 +1,10 @@
 package com.sharemiracle.controller;
 
+import com.sharemiracle.constant.MessageConstant;
 import com.sharemiracle.dto.SearchDTO;
 import com.sharemiracle.dto.ElasticSearchItemDTO;
 import com.sharemiracle.result.Result;
+import com.sharemiracle.service.ElasticSearchService;
 import com.sharemiracle.service.serviceImpl.DatasetServiceImpl;
 import com.sharemiracle.service.serviceImpl.ElasticSearchServerImpl;
 
@@ -20,7 +22,7 @@ import java.util.List;
 @RequestMapping("/es")
 public class ElasticSearchController {
     @Resource
-    private ElasticSearchServerImpl elasticSearchServerImpl;
+    private ElasticSearchService elasticSearchServerImpl;
 
     /**
      * 查找数据
@@ -28,8 +30,8 @@ public class ElasticSearchController {
     @GetMapping("/search")
     public Result<EsSearchVO> searchController(@RequestBody SearchDTO searchDTO) throws IOException {
         log.info("查找数据：{}", searchDTO);
-        Result<EsSearchVO> result = elasticSearchServerImpl.search(searchDTO);
-        return result;
+        EsSearchVO result = elasticSearchServerImpl.search(searchDTO);
+        return Result.success(result, MessageConstant.ESSEAERCH_SUCCESS);
     }
 
     @PutMapping("/addItem")

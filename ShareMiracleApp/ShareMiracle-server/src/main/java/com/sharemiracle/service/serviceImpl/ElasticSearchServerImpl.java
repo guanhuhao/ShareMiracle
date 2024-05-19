@@ -25,14 +25,14 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
     @Autowired
     private ElasticsearchClient esClient;
 
-    @Resource
-    private ElasticSearchMapper esMapper;
+    //@Resource
+    //private ElasticSearchMapper esMapper;
 
     /**
      * 1.查询Es数据库
      */
     @Override
-    public Result<EsSearchVO> search(SearchDTO searchDTO) throws IOException {
+    public EsSearchVO search(SearchDTO searchDTO) throws IOException {
         // 解析前端DTO
         List<String> dataTypes = searchDTO.getDatatype();
         List<String> modals = searchDTO.getModal();
@@ -75,14 +75,11 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
         }
 
         // 构建前端视图
-        EsSearchVO esSearchVO = new EsSearchVO(
+        return new EsSearchVO(
                 hits.size(),
                 scores,
                 results
         );
-        Result<EsSearchVO> result = Result.success(esSearchVO);
-        result.setMsg(MessageConstant.ESSEAERCH_SUCCESS);
-        return result;
     }
 
     @Override
