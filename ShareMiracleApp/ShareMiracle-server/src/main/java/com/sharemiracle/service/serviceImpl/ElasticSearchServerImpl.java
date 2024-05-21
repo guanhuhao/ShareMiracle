@@ -37,19 +37,27 @@ public class ElasticSearchServerImpl implements ElasticSearchService {
         List<String> dataTypes = searchDTO.getDatatype();
         List<String> modals = searchDTO.getModal();
         List<String> tags = searchDTO.getTag();
+        String queryStr = searchDTO.getQueryStr();
 
         //构建查询语句关键词
         StringBuilder tagBuilder = new StringBuilder();
-        for( String tag : dataTypes){
-            tagBuilder.append(String.format("%s ",tag));
+        if (dataTypes != null) {
+            for (String tag : dataTypes) {
+                tagBuilder.append(String.format("%s ", tag));
+            }
         }
-        for( String tag : modals){
-            tagBuilder.append(String.format("%s ",tag));
+        if (modals != null) {
+            for (String tag : modals) {
+                tagBuilder.append(String.format("%s ", tag));
+            }
         }
-        for( String tag : tags){
-            tagBuilder.append(String.format("%s ",tag));
+        if (tags != null) {
+            for (String tag : tags) {
+                tagBuilder.append(String.format("%s ", tag));
+            }
         }
-        tagBuilder.append(String.format("%s ",searchDTO.getQuery()));
+        if (queryStr != null)
+            tagBuilder.append(String.format("%s ",queryStr));
 
         String query_keywords = tagBuilder.toString();
         log.info("build query token:{}",query_keywords);

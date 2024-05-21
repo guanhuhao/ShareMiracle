@@ -24,6 +24,6 @@ public class SearchDTO implements Serializable {
     private List<String> tag;
 
     //描述方式
-    private String query;
+    private String queryStr;
 
 }
