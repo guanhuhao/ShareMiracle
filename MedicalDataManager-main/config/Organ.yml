@@ -1,0 +1,4 @@
+host: 139.196.106.190
+port: 8080
+api: organ
+token: "your_actual_token"

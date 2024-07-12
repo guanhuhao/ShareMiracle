@@ -1,0 +1,34 @@
+{
+    "id": 51,
+    "name": "ASOCA",
+    "origin_url": "https://xxx.xxx",
+    "description": "xxxx",
+    "release_date": "2024.05.21",
+    "task_ids": [
+        10
+    ],
+    "modality_ids": [
+        0,
+        1
+    ],
+    "organ_ids": [
+        0,
+        1
+    ],
+    "data_num": 114514,
+    "label_num": 0,
+    "split_info": {
+        "train": {
+            "data": 110,
+            "label": 110
+        },
+        "test": {
+            "data": 100,
+            "label": 100
+        },
+        "val": {
+            "data": 0,
+            "label": 0
+        }
+    }
+}

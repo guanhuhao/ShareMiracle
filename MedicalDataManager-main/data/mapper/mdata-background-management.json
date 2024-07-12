@@ -1,0 +1,28 @@
+{
+    "index_name": "mdata-background-management",
+    "mapping": {
+        "properties": {
+            "id": {
+                "type": "long"
+            },
+            "name": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "status": {
+                "type": "integer"
+            },
+            "createTS": {
+                "type": "long"
+            },
+            "modifyTS": {
+                "type": "long"
+            }
+        }
+    }
+}

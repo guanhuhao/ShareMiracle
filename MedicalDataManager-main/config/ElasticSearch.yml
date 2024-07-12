@@ -1,0 +1,4 @@
+host: 139.196.106.190
+port: 9200
+username: elastic
+password: "123456"

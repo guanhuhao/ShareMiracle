@@ -1,0 +1,12 @@
+{
+    "0": "others",
+    "1": "common",
+    "2": "ct",
+    "3": "mri",
+    "4": "xray",
+    "5": "pet",
+    "6": "ultrasonic",
+    "7": "wsi",
+    "8": "ehr",
+    "9": "biomarker"
+}

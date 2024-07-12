@@ -1,0 +1,9 @@
+{
+    "0": "others",
+    "1": "classification",
+    "2": "segmentation",
+    "3": "detection",
+    "4": "reconstruction",
+    "5": "superresolution",
+    "6": "registration"
+}

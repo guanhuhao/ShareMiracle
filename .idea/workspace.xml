@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="993060e8-531b-4773-b832-7b7493d8e4d1" name="更改" comment="更改">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/gcsj-demo02._51E-w.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/gcsj.M1QwAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/44c16dbf-4679-47c2-9258-8b1e1b5dda33/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/json/JacksonObjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/json/JacksonObjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/properties/JwtProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-common/src/main/java/com/sharemiracle/properties/JwtProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-server/src/main/java/com/sharemiracle/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShareMiracleApp/ShareMiracle-server/src/main/java/com/sharemiracle/config/WebMvcConfiguration.java" afterDir="false" />
-    </list>
+    <list default="true" id="993060e8-531b-4773-b832-7b7493d8e4d1" name="更改" comment="更改" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +84,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git_WorkSpace\gcsj\ShareMiracle" />
       <recent name="E:\gcsj\ShareMiracle\gcsj-server\src\main\resources\http" />
       <recent name="E:\gcsj\ShareMiracle\gcsj-server\src\main\resources" />
     </key>

@@ -1,0 +1,105 @@
+{
+    "index_name": "mdata-meta-info",
+    "mapping": {
+        "properties": {
+            "id": {
+                "type": "long"
+            },
+            "name": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "origin_url": {
+                "type": "text"
+            },
+            "description": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "release_date": {
+                "type": "text"
+            },
+            "task_ids": {
+                "type": "integer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "modality_ids": {
+                "type": "integer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "organ_ids": {
+                "type": "integer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "data_num": {
+                "type": "long"
+            },
+            "label_num": {
+                "type": "long"
+            },
+            "split_info": {
+                "type": "object",
+                "properties": {
+                    "train": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "type": "long"
+                            },
+                            "label": {
+                                "type": "long"
+                            }
+                        }
+                    },
+                    "test": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "type": "long"
+                            },
+                            "label": {
+                                "type": "long"
+                            }
+                        }
+                    },
+                    "val": {
+                        "type": "object",
+                        "properties": {
+                            "data": {
+                                "type": "long"
+                            },
+                            "label": {
+                                "type": "long"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

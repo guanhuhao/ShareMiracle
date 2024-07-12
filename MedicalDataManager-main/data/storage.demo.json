@@ -1,0 +1,13 @@
+{
+    "storage": [
+        {
+            "path": "/data/multimodal-medical-database/storage",
+            "data-info": [
+                {
+                    "name": "4DCT",
+                    "origin_url": "https://med.emory.edu/departments/radiation-oncology/research-laboratories/deformable-image-registration/downloads-and-reference-data/4dct.html"
+                }
+            ]
+        }
+    ]
+}

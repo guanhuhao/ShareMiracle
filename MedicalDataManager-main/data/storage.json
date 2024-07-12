@@ -1,0 +1,2051 @@
+{
+    "storage": [
+        {
+            "data_num": 285,
+            "description": "Pancreas and cancer segmentation",
+            "id": 58,
+            "label_num": 284,
+            "modality_ids": [],
+            "name": "Pancreas",
+            "organ_ids": [],
+            "orgin_url": "Memorial Sloan Kettering Cancer Center ",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 285,
+                    "label": 284
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 50,
+            "description": "",
+            "id": 5,
+            "label_num": 50,
+            "modality_ids": [],
+            "name": "flare22train",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 50,
+                    "label": 50
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 131,
+            "description": "LITS2017",
+            "id": 56,
+            "label_num": 131,
+            "modality_ids": [],
+            "name": "LITS2017",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 131,
+                    "label": 131
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 15,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "chaost2",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 23,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "deep",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 42,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "asoca",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 10,
+            "description": "COVID-19",
+            "id": 34,
+            "label_num": 10,
+            "modality_ids": [],
+            "name": "COVID-19",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 10,
+                    "label": 10
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 31,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "isic-2019",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 26,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "ddsm",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 262,
+            "description": "Liver, and cancer segmentation",
+            "id": 63,
+            "label_num": 262,
+            "modality_ids": [],
+            "name": "Liver",
+            "organ_ids": [],
+            "orgin_url": "xxxx",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 262,
+                    "label": 262
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 120,
+            "description": "Whole abdomen ORgan segmentation Dataset (WORD), just for research use !!!",
+            "id": 33,
+            "label_num": 120,
+            "modality_ids": [],
+            "name": "WORD-V0.1.0",
+            "organ_ids": [],
+            "orgin_url": "WORD: Revisiting Organs Segmentation in the Whole Abdominal Region, link:https://arxiv.org/pdf/2111.02403.pdf, https://github.com/HiLab-git/WORD",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 100,
+                    "label": 100
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 20,
+                    "label": 20
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 65,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "rfmid",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 28,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "vqa",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 29,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "vqa-rad",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 120,
+            "description": "Whole abdomen ORgan segmentation Dataset (WORD), just for research use !!!",
+            "id": 36,
+            "label_num": 120,
+            "modality_ids": [],
+            "name": "WORD-V0.1.0",
+            "organ_ids": [],
+            "orgin_url": "WORD: Revisiting Organs Segmentation in the Whole Abdominal Region, link:https://arxiv.org/pdf/2111.02403.pdf, https://github.com/HiLab-git/WORD",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 100,
+                    "label": 100
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 20,
+                    "label": 20
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 24,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "luna16",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 241,
+            "description": "Amos: A large-scale abdominal multi-organ benchmark for versatile medical image segmentation",
+            "id": 51,
+            "label_num": 240,
+            "modality_ids": [],
+            "name": "AMOS",
+            "organ_ids": [],
+            "orgin_url": "SRIDB x CUHKSZ x HKU x LGCHSZ x LGPHSZ",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 241,
+                    "label": 240
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 59,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "chestxray-14",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 1202,
+            "description": "",
+            "id": 27,
+            "label_num": 1202,
+            "modality_ids": [],
+            "name": "totalseg",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 1202,
+                    "label": 1202
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 50,
+            "description": "",
+            "id": 43,
+            "label_num": 30,
+            "modality_ids": [],
+            "name": "btcv",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 50,
+                    "label": 30
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 47,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "msd",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 14,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "kits19",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 22,
+            "description": "",
+            "id": 69,
+            "label_num": 22,
+            "modality_ids": [],
+            "name": "3d-ircadb",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 22,
+                    "label": 22
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 42,
+            "description": "HaN-seg",
+            "id": 68,
+            "label_num": 913,
+            "modality_ids": [],
+            "name": "HaN-seg",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 42,
+                    "label": 913
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 120,
+            "description": "Sliver07",
+            "id": 0,
+            "label_num": 120,
+            "modality_ids": [
+                0,
+                1
+            ],
+            "name": "Sliver07",
+            "organ_ids": [
+                0,
+                1
+            ],
+            "orgin_url": "none",
+            "release_date": "2024.05.21",
+            "split_info": {
+                "train": {
+                    "data": 20,
+                    "label": 20
+                },
+                "test": {
+                    "data": 100,
+                    "label": 100
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": [
+                10
+            ]
+        },
+        {
+            "data_num": 497,
+            "description": "",
+            "id": 49,
+            "label_num": 497,
+            "modality_ids": [],
+            "name": "word",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 497,
+                    "label": 497
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 1163,
+            "description": "AbdomenCT-1K",
+            "id": 30,
+            "label_num": 1100,
+            "modality_ids": [
+                0,
+                1
+            ],
+            "name": "AbdomenCT-1K",
+            "organ_ids": [
+                0,
+                1
+            ],
+            "orgin_url": "none",
+            "release_date": "2024.05.21",
+            "split_info": {
+                "train": {
+                    "data": 1063,
+                    "label": 1000
+                },
+                "test": {
+                    "data": 100,
+                    "label": 100
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": [
+                10
+            ]
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 64,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "decathlon",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 411,
+            "description": "FLARE2021",
+            "id": 18,
+            "label_num": 361,
+            "modality_ids": [],
+            "name": "FLARE2021",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 361,
+                    "label": 361
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 50,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 16,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "ct-org",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 13,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "labelstrprocess1",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 74,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "dataset2",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 62,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "bcv-cervix",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 131,
+            "description": "LITS2017",
+            "id": 25,
+            "label_num": 131,
+            "modality_ids": [],
+            "name": "LITS2017",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 131,
+                    "label": 131
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 20,
+            "description": "CHAOS",
+            "id": 9,
+            "label_num": 20,
+            "modality_ids": [],
+            "name": "CHAOS",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 20,
+                    "label": 20
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 8,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "4dct",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 19,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "ctpelvic1k",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 38,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "atm",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 1202,
+            "description": "",
+            "id": 2,
+            "label_num": 1202,
+            "modality_ids": [
+                0,
+                1
+            ],
+            "name": "ASOCA",
+            "organ_ids": [
+                0,
+                1
+            ],
+            "orgin_url": "",
+            "release_date": "2024.05.21",
+            "split_info": {
+                "train": {
+                    "data": 1202,
+                    "label": 1202
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": [
+                10
+            ]
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 70,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "3d-ircadb",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 7,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "isic-2017",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 37,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "isic-2018",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 73,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "kvasir-seg",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 55,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "pancreas-ct",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 52,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "untitle-ct-register",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 79,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "sliver07",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 40,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "kits19",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 77,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "nihpancrease",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 82,
+            "description": "Pancreas-CT",
+            "id": 54,
+            "label_num": 82,
+            "modality_ids": [
+                0
+            ],
+            "name": "Pancreas-CT",
+            "organ_ids": [
+                0,
+                1
+            ],
+            "orgin_url": "none",
+            "release_date": "2024.05.21",
+            "split_info": {
+                "train": {
+                    "data": 82,
+                    "label": 82
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": [
+                10
+            ]
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 3,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "rplhr",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 606,
+            "description": "Hepatic Vessels and Tumour Segmentation",
+            "id": 35,
+            "label_num": 606,
+            "modality_ids": [],
+            "name": "HepaticVessel",
+            "organ_ids": [],
+            "orgin_url": "Memorial Sloan Kettering Cancer Center",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 606,
+                    "label": 606
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 60,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "labelstrtrprocess2",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 489,
+            "description": "KiTS2023",
+            "id": 67,
+            "label_num": 489,
+            "modality_ids": [],
+            "name": "KiTS2023",
+            "organ_ids": [],
+            "orgin_url": "none",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 489,
+                    "label": 489
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 48,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "labelstrprocess",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 158,
+            "description": "Lung and cancer segmentation",
+            "id": 57,
+            "label_num": 158,
+            "modality_ids": [
+                0
+            ],
+            "name": "Lung",
+            "organ_ids": [
+                0
+            ],
+            "orgin_url": "The Cancer Imaging Archive",
+            "release_date": "1.0 04/05/2018",
+            "split_info": {
+                "train": {
+                    "data": 126,
+                    "label": 126
+                },
+                "test": {
+                    "data": 32,
+                    "label": 32
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": [
+                10
+            ]
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 45,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "labelv2",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 20,
+            "description": "CHAOS",
+            "id": 53,
+            "label_num": 20,
+            "modality_ids": [],
+            "name": "CHAOS",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 20,
+                    "label": 20
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 75,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "kits23",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 80,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "isic-2020",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 46,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "deeplesion",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 39,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "kipa22",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 17,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "labelstrv2",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 21,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "kits21",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 6,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "structseg2019",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 4,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "isic-2016",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 252,
+            "description": "Colon Cancer segmentation",
+            "id": 20,
+            "label_num": 252,
+            "modality_ids": [],
+            "name": "Colon",
+            "organ_ids": [],
+            "orgin_url": " Memorial Sloan Kettering Cancer Center",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 252,
+                    "label": 252
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 11,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "cifar-10",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 50,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "refcoco",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 12,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "head-and-neck-challenge",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 22,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "ilsvrc2012",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 32,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "sabs",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 139,
+            "description": "VerSe2020",
+            "id": 71,
+            "label_num": 139,
+            "modality_ids": [],
+            "name": "VerSe2020",
+            "organ_ids": [],
+            "orgin_url": "USTC",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 61,
+                    "label": 61
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 78,
+                    "label": 78
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 61,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "riadd-ieee-isbi-2021",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 72,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "cache",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 82,
+            "description": "Spleen Segmentation",
+            "id": 10,
+            "label_num": 82,
+            "modality_ids": [
+                0,
+                1
+            ],
+            "name": "Spleen",
+            "organ_ids": [
+                0,
+                1
+            ],
+            "orgin_url": "Memorial Sloan Kettering Cancer Center",
+            "release_date": "2024.05.21",
+            "split_info": {
+                "train": {
+                    "data": 82,
+                    "label": 82
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": [
+                10
+            ]
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 76,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "hcp",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        },
+        {
+            "data_num": 0,
+            "description": "",
+            "id": 78,
+            "label_num": 0,
+            "modality_ids": [],
+            "name": "verse2019",
+            "organ_ids": [],
+            "orgin_url": "",
+            "release_date": "",
+            "split_info": {
+                "train": {
+                    "data": 0,
+                    "label": 0
+                },
+                "test": {
+                    "data": 0,
+                    "label": 0
+                },
+                "val": {
+                    "data": 0,
+                    "label": 0
+                }
+            },
+            "task_ids": []
+        }
+    ]
+}

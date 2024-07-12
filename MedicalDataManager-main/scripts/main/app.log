@@ -1,0 +1,525 @@
+2024-07-08 15:39:13,750 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:15,764 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A3226F860>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:15,770 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:17,814 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/authority?authority=0 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A3226F668>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:17,818 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:19,871 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/authority?authority=1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A3226F4E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:19,874 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:21,920 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/delete/user (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A32294160>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:21,924 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:23,967 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A322A30F0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:23,971 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:25,995 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A322A3978>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:25,999 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:28,038 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/status?status=0 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A32294470>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-08 15:39:28,042 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-08 15:39:30,059 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/status?status=1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A3226FEF0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 16:54:20,386 - INFO - Sending request to http://127.0.0.1:8080/dataset/add with data: {'id': 555666777888, 'name': '测试数据集', 'isPublic': 1, 'datasetUrl': 'www.baidu.com', 'shareOrganization': [{'id': 11111}, {'id': 22222}, {'id': 33333}, {'id': 44444}, {'id': 55555}]}
+2024-07-12 16:54:20,389 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 16:54:22,418 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /dataset/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FC843A3828>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 16:54:22,419 - ERROR - Failing API endpoint: http://127.0.0.1:8080/dataset/add
+2024-07-12 16:54:22,419 - INFO - Total successful test points: 0
+2024-07-12 16:54:22,419 - INFO - Total failed test points: 1
+2024-07-12 16:54:22,419 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 16:54:22,421 - INFO - Total successful test points: 0
+2024-07-12 16:54:22,421 - INFO - Total failed test points: 0
+2024-07-12 16:54:22,421 - INFO - All test points passed successfully.
+2024-07-12 16:55:15,919 - INFO - Sending request to http://127.0.0.1:8080/dataset/add with data: {'id': 555666777888, 'name': '测试数据集', 'isPublic': 1, 'datasetUrl': 'www.baidu.com', 'shareOrganization': [{'id': 11111}, {'id': 22222}, {'id': 33333}, {'id': 44444}, {'id': 55555}]}
+2024-07-12 16:55:15,921 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 16:55:17,952 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /dataset/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000253664A3898>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 16:55:17,953 - ERROR - Failing API endpoint: http://127.0.0.1:8080/dataset/add
+2024-07-12 16:55:17,953 - INFO - Total successful test points: 0
+2024-07-12 16:55:17,953 - INFO - Total failed test points: 1
+2024-07-12 16:55:17,953 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 16:55:17,959 - INFO - Sending request to http://127.0.0.1:8080/dataset/delete with data: {'id': 555666777888}
+2024-07-12 16:55:17,960 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 16:55:19,999 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /dataset/delete (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000253664A34E0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 16:55:20,000 - ERROR - Failing API endpoint: http://127.0.0.1:8080/dataset/delete
+2024-07-12 16:55:20,000 - INFO - Total successful test points: 0
+2024-07-12 16:55:20,000 - INFO - Total failed test points: 1
+2024-07-12 16:55:20,000 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 16:55:20,003 - INFO - Sending request to http://127.0.0.1:8080/dataset/organ with data: {'datasetId': 1, 'ids': [11111, 22222, 33333, 44444, 55555]}
+2024-07-12 16:55:20,005 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 16:55:22,037 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /dataset/organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000253664C11D0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 16:55:22,037 - ERROR - Failing API endpoint: http://127.0.0.1:8080/dataset/organ
+2024-07-12 16:55:22,038 - INFO - Total successful test points: 0
+2024-07-12 16:55:22,038 - INFO - Total failed test points: 1
+2024-07-12 16:55:22,038 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 16:55:22,040 - INFO - Total successful test points: 0
+2024-07-12 16:55:22,040 - INFO - Total failed test points: 0
+2024-07-12 16:55:22,040 - INFO - All test points passed successfully.
+2024-07-12 17:00:07,546 - INFO - Sending request to http://127.0.0.1:8080/model/add with data: {'id': 555666777888, 'name': '测试模型', 'isPublic': 1, 'userId': 1, 'modelUrl': '//模型存储地址', 'shareOrganization': [1]}
+2024-07-12 17:00:07,548 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:00:09,592 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /model/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CE8DD3748>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:00:09,592 - ERROR - Failing API endpoint: http://127.0.0.1:8080/model/add
+2024-07-12 17:00:09,592 - INFO - Total successful test points: 0
+2024-07-12 17:00:09,592 - INFO - Total failed test points: 1
+2024-07-12 17:00:09,592 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:00:09,595 - INFO - Sending request to http://127.0.0.1:8080/model with data: {'id': 555666777888}
+2024-07-12 17:00:09,595 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:00:11,641 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CE8DD36D8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:00:11,641 - ERROR - Failing API endpoint: http://127.0.0.1:8080/model
+2024-07-12 17:00:11,641 - INFO - Total successful test points: 0
+2024-07-12 17:00:11,641 - INFO - Total failed test points: 1
+2024-07-12 17:00:11,641 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:00:11,647 - INFO - Sending request to http://127.0.0.1:8080/model with data: {'modelId': 1, 'ids': [11111, 22222, 33333, 44444, 55555]}
+2024-07-12 17:00:11,649 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:00:13,681 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CE8DF6048>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:00:13,681 - ERROR - Failing API endpoint: http://127.0.0.1:8080/model
+2024-07-12 17:00:13,681 - INFO - Total successful test points: 0
+2024-07-12 17:00:13,681 - INFO - Total failed test points: 1
+2024-07-12 17:00:13,681 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:00:13,684 - INFO - Sending request to http://127.0.0.1:8080/model with data: {'modelid': 12345678}
+2024-07-12 17:00:13,685 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:00:15,731 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CE8DF6860>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:00:15,731 - ERROR - Failing API endpoint: http://127.0.0.1:8080/model
+2024-07-12 17:00:15,731 - INFO - Total successful test points: 0
+2024-07-12 17:00:15,731 - INFO - Total failed test points: 1
+2024-07-12 17:00:15,731 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:00:15,733 - INFO - Sending request to http://127.0.0.1:8080/model/1 with data: {'id': 12345679}
+2024-07-12 17:00:15,734 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:00:17,787 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /model/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CE8DFF0B8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:00:17,787 - ERROR - Failing API endpoint: http://127.0.0.1:8080/model/1
+2024-07-12 17:00:17,787 - INFO - Total successful test points: 0
+2024-07-12 17:00:17,787 - INFO - Total failed test points: 1
+2024-07-12 17:00:17,788 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:00:17,791 - INFO - Sending request to http://127.0.0.1:8080/model with data: {'id': 1, 'name': '测试模型', 'modelUrl': 'www.baidu.com'}
+2024-07-12 17:00:17,793 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:00:19,836 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /model (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023CE8DFFA20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:00:19,836 - ERROR - Failing API endpoint: http://127.0.0.1:8080/model
+2024-07-12 17:00:19,836 - INFO - Total successful test points: 0
+2024-07-12 17:00:19,837 - INFO - Total failed test points: 1
+2024-07-12 17:00:19,837 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:31,690 - INFO - Sending request to http://127.0.0.1:8080/organ with data: {'id': 199910, 'name': '测试组织', 'type': 0, 'logoUrl': ''}
+2024-07-12 17:16:31,694 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:33,728 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B6D3828>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:33,729 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ
+2024-07-12 17:16:33,729 - INFO - Total successful test points: 0
+2024-07-12 17:16:33,729 - INFO - Total failed test points: 1
+2024-07-12 17:16:33,729 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:33,733 - INFO - Sending request to http://127.0.0.1:8080/organ/authority?authority=0 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:16:33,734 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:35,771 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/authority?authority=0 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B6D3550>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:35,771 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ/authority?authority=0
+2024-07-12 17:16:35,771 - INFO - Total successful test points: 0
+2024-07-12 17:16:35,772 - INFO - Total failed test points: 1
+2024-07-12 17:16:35,772 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:35,777 - INFO - Sending request to http://127.0.0.1:8080/organ/authority?authority=1 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:16:35,778 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:37,816 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/authority?authority=1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B6D3E48>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:37,816 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ/authority?authority=1
+2024-07-12 17:16:37,816 - INFO - Total successful test points: 0
+2024-07-12 17:16:37,816 - INFO - Total failed test points: 1
+2024-07-12 17:16:37,816 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:37,819 - INFO - Sending request to http://127.0.0.1:8080/organ/delete/user with data: {'organId': 199910, 'userId': 1}
+2024-07-12 17:16:37,820 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:39,872 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/delete/user (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B6F4128>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:39,872 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ/delete/user
+2024-07-12 17:16:39,873 - INFO - Total successful test points: 0
+2024-07-12 17:16:39,873 - INFO - Total failed test points: 1
+2024-07-12 17:16:39,873 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:39,877 - INFO - Sending request to http://127.0.0.1:8080/organ with data: {'id': 199910}
+2024-07-12 17:16:39,878 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:41,923 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B70D0B8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:41,924 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ
+2024-07-12 17:16:41,924 - INFO - Total successful test points: 0
+2024-07-12 17:16:41,924 - INFO - Total failed test points: 1
+2024-07-12 17:16:41,924 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:41,928 - INFO - Sending request to http://127.0.0.1:8080/organ with data: {'id': 199910, 'userId': 1}
+2024-07-12 17:16:41,930 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:43,970 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B70D940>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:43,970 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ
+2024-07-12 17:16:43,970 - INFO - Total successful test points: 0
+2024-07-12 17:16:43,970 - INFO - Total failed test points: 1
+2024-07-12 17:16:43,970 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:43,973 - INFO - Sending request to http://127.0.0.1:8080/organ/status?status=0 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:16:43,974 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:45,998 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/status?status=0 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B6F4278>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:45,998 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ/status?status=0
+2024-07-12 17:16:45,998 - INFO - Total successful test points: 0
+2024-07-12 17:16:45,999 - INFO - Total failed test points: 1
+2024-07-12 17:16:45,999 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:16:46,001 - INFO - Sending request to http://127.0.0.1:8080/organ/status?status=1 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:16:46,002 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:16:48,032 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /organ/status?status=1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002586B6D3FD0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:16:48,032 - ERROR - Failing API endpoint: http://127.0.0.1:8080/organ/status?status=1
+2024-07-12 17:16:48,032 - INFO - Total successful test points: 0
+2024-07-12 17:16:48,032 - INFO - Total failed test points: 1
+2024-07-12 17:16:48,032 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:08,075 - INFO - Sending request to http://127.0.0.1:8080/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string', 'password': 'string'}
+2024-07-12 17:17:08,077 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:10,108 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D243A58>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:10,108 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user
+2024-07-12 17:17:10,109 - INFO - Total successful test points: 0
+2024-07-12 17:17:10,109 - INFO - Total failed test points: 1
+2024-07-12 17:17:10,109 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:10,112 - INFO - Sending request to http://127.0.0.1:8080/user/authority/1 with data: {}
+2024-07-12 17:17:10,113 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:12,142 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/authority/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D219A20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:12,142 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/authority/1
+2024-07-12 17:17:12,142 - INFO - Total successful test points: 0
+2024-07-12 17:17:12,142 - INFO - Total failed test points: 1
+2024-07-12 17:17:12,143 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:12,148 - INFO - Sending request to http://127.0.0.1:8080/user/userInfo with data: {'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTczMTExNzgsInVzZXJJZCI6IjcifQ.Ea2UiLBWwZtYkvhlHnVDp7ZAcVDJzX94motJDRs2UaE'}
+2024-07-12 17:17:12,149 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:14,181 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/userInfo (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D219860>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:14,181 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/userInfo
+2024-07-12 17:17:14,181 - INFO - Total successful test points: 0
+2024-07-12 17:17:14,181 - INFO - Total failed test points: 1
+2024-07-12 17:17:14,181 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:14,183 - INFO - Sending request to http://127.0.0.1:8080/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string'}
+2024-07-12 17:17:14,185 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:16,228 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D27DA20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:16,229 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user
+2024-07-12 17:17:16,229 - INFO - Total successful test points: 0
+2024-07-12 17:17:16,229 - INFO - Total failed test points: 1
+2024-07-12 17:17:16,229 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:16,236 - INFO - Sending request to http://127.0.0.1:8080/user/login with data: {'password': 'admin', 'username': 'admin'}
+2024-07-12 17:17:16,237 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:18,263 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/login (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D26D2B0>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:18,263 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/login
+2024-07-12 17:17:18,263 - INFO - Total successful test points: 0
+2024-07-12 17:17:18,263 - INFO - Total failed test points: 1
+2024-07-12 17:17:18,263 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:18,265 - INFO - Sending request to http://127.0.0.1:8080/user/logout with data: {}
+2024-07-12 17:17:18,266 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:20,294 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/logout (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D26DC50>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:20,294 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/logout
+2024-07-12 17:17:20,294 - INFO - Total successful test points: 0
+2024-07-12 17:17:20,295 - INFO - Total failed test points: 1
+2024-07-12 17:17:20,295 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:20,296 - INFO - Sending request to http://127.0.0.1:8080/user/page with data: {}
+2024-07-12 17:17:20,298 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:22,333 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/page (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D27D518>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:22,333 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/page
+2024-07-12 17:17:22,333 - INFO - Total successful test points: 0
+2024-07-12 17:17:22,333 - INFO - Total failed test points: 1
+2024-07-12 17:17:22,334 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:22,337 - INFO - Sending request to http://127.0.0.1:8080/user/editPassword with data: {'userId': 0, 'newPassword': 'string', 'oldPassword': 'string'}
+2024-07-12 17:17:22,338 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:24,373 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/editPassword (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D243A20>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:24,373 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/editPassword
+2024-07-12 17:17:24,373 - INFO - Total successful test points: 0
+2024-07-12 17:17:24,373 - INFO - Total failed test points: 1
+2024-07-12 17:17:24,373 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:24,375 - INFO - Sending request to http://127.0.0.1:8080/user/555666777 with data: {}
+2024-07-12 17:17:24,377 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:26,411 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/555666777 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D219978>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:26,411 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/555666777
+2024-07-12 17:17:26,411 - INFO - Total successful test points: 0
+2024-07-12 17:17:26,412 - INFO - Total failed test points: 1
+2024-07-12 17:17:26,412 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:26,415 - INFO - Sending request to http://127.0.0.1:8080/user/status/1 with data: {}
+2024-07-12 17:17:26,416 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:28,446 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/status/1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D26DAC8>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:28,446 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/status/1
+2024-07-12 17:17:28,446 - INFO - Total successful test points: 0
+2024-07-12 17:17:28,446 - INFO - Total failed test points: 1
+2024-07-12 17:17:28,446 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:17:28,448 - INFO - Sending request to http://127.0.0.1:8080/user/validEmail with data: {'email': '1193466151@qq.com'}
+2024-07-12 17:17:28,449 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 17:17:30,478 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /user/validEmail (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026F9D281208>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 17:17:30,478 - ERROR - Failing API endpoint: http://127.0.0.1:8080/user/validEmail
+2024-07-12 17:17:30,478 - INFO - Total successful test points: 0
+2024-07-12 17:17:30,478 - INFO - Total failed test points: 1
+2024-07-12 17:17:30,478 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,675 - INFO - Sending request to http://139.196.106.190:8002:8002/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string', 'password': 'string'}
+2024-07-12 17:25:17,677 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user
+2024-07-12 17:25:17,677 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user
+2024-07-12 17:25:17,677 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,677 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,677 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,678 - INFO - Sending request to http://139.196.106.190:8002:8002/user/authority/1 with data: {}
+2024-07-12 17:25:17,679 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/authority/1
+2024-07-12 17:25:17,679 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/authority/1
+2024-07-12 17:25:17,679 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,679 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,679 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,680 - INFO - Sending request to http://139.196.106.190:8002:8002/user/userInfo with data: {'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTczMTExNzgsInVzZXJJZCI6IjcifQ.Ea2UiLBWwZtYkvhlHnVDp7ZAcVDJzX94motJDRs2UaE'}
+2024-07-12 17:25:17,680 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/userInfo
+2024-07-12 17:25:17,680 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/userInfo
+2024-07-12 17:25:17,680 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,680 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,680 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,681 - INFO - Sending request to http://139.196.106.190:8002:8002/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string'}
+2024-07-12 17:25:17,681 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user
+2024-07-12 17:25:17,682 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user
+2024-07-12 17:25:17,682 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,682 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,682 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,683 - INFO - Sending request to http://139.196.106.190:8002:8002/user/login with data: {'password': 'admin', 'username': 'admin'}
+2024-07-12 17:25:17,683 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/login
+2024-07-12 17:25:17,683 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/login
+2024-07-12 17:25:17,683 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,683 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,683 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,684 - INFO - Sending request to http://139.196.106.190:8002:8002/user/logout with data: {}
+2024-07-12 17:25:17,684 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/logout
+2024-07-12 17:25:17,684 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/logout
+2024-07-12 17:25:17,685 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,685 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,685 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,686 - INFO - Sending request to http://139.196.106.190:8002:8002/user/page with data: {}
+2024-07-12 17:25:17,686 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/page
+2024-07-12 17:25:17,686 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/page
+2024-07-12 17:25:17,686 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,686 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,686 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,687 - INFO - Sending request to http://139.196.106.190:8002:8002/user/editPassword with data: {'userId': 0, 'newPassword': 'string', 'oldPassword': 'string'}
+2024-07-12 17:25:17,687 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/editPassword
+2024-07-12 17:25:17,687 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/editPassword
+2024-07-12 17:25:17,687 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,687 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,687 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,689 - INFO - Sending request to http://139.196.106.190:8002:8002/user/555666777 with data: {}
+2024-07-12 17:25:17,689 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/555666777
+2024-07-12 17:25:17,689 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/555666777
+2024-07-12 17:25:17,689 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,689 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,689 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,690 - INFO - Sending request to http://139.196.106.190:8002:8002/user/status/1 with data: {}
+2024-07-12 17:25:17,690 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/status/1
+2024-07-12 17:25:17,690 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/status/1
+2024-07-12 17:25:17,690 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,690 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,690 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:25:17,691 - INFO - Sending request to http://139.196.106.190:8002:8002/user/validEmail with data: {'email': '1193466151@qq.com'}
+2024-07-12 17:25:17,692 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/user/validEmail
+2024-07-12 17:25:17,692 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/user/validEmail
+2024-07-12 17:25:17,692 - INFO - Total successful test points: 0
+2024-07-12 17:25:17,692 - INFO - Total failed test points: 1
+2024-07-12 17:25:17,692 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,253 - INFO - Sending request to http://139.196.106.190:8002:8002/organ with data: {'id': 199910, 'name': '测试组织', 'type': 0, 'logoUrl': ''}
+2024-07-12 17:26:14,254 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ
+2024-07-12 17:26:14,254 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ
+2024-07-12 17:26:14,254 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,254 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,254 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,255 - INFO - Sending request to http://139.196.106.190:8002:8002/organ/authority?authority=0 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:26:14,256 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ/authority?authority=0
+2024-07-12 17:26:14,256 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ/authority?authority=0
+2024-07-12 17:26:14,256 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,256 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,256 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,257 - INFO - Sending request to http://139.196.106.190:8002:8002/organ/authority?authority=1 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:26:14,257 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ/authority?authority=1
+2024-07-12 17:26:14,257 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ/authority?authority=1
+2024-07-12 17:26:14,257 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,258 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,258 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,258 - INFO - Sending request to http://139.196.106.190:8002:8002/organ/delete/user with data: {'organId': 199910, 'userId': 1}
+2024-07-12 17:26:14,259 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ/delete/user
+2024-07-12 17:26:14,259 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ/delete/user
+2024-07-12 17:26:14,259 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,259 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,259 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,260 - INFO - Sending request to http://139.196.106.190:8002:8002/organ with data: {'id': 199910}
+2024-07-12 17:26:14,260 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ
+2024-07-12 17:26:14,260 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ
+2024-07-12 17:26:14,260 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,260 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,260 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,261 - INFO - Sending request to http://139.196.106.190:8002:8002/organ with data: {'id': 199910, 'userId': 1}
+2024-07-12 17:26:14,262 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ
+2024-07-12 17:26:14,262 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ
+2024-07-12 17:26:14,262 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,262 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,262 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,263 - INFO - Sending request to http://139.196.106.190:8002:8002/organ/status?status=0 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:26:14,263 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ/status?status=0
+2024-07-12 17:26:14,263 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ/status?status=0
+2024-07-12 17:26:14,263 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,263 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,263 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:26:14,264 - INFO - Sending request to http://139.196.106.190:8002:8002/organ/status?status=1 with data: {'organizationId': 199910, 'userId': 1}
+2024-07-12 17:26:14,264 - ERROR - Request failed: Failed to parse: http://139.196.106.190:8002:8002/organ/status?status=1
+2024-07-12 17:26:14,265 - ERROR - Failing API endpoint: http://139.196.106.190:8002:8002/organ/status?status=1
+2024-07-12 17:26:14,265 - INFO - Total successful test points: 0
+2024-07-12 17:26:14,265 - INFO - Total failed test points: 1
+2024-07-12 17:26:14,265 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:52,860 - INFO - Sending request to http://139.196.106.190:8080/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string', 'password': 'string'}
+2024-07-12 17:33:52,862 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:52,931 - DEBUG - http://139.196.106.190:8080 "POST /user HTTP/1.1" 200 None
+2024-07-12 17:33:52,934 - INFO - Request successful!
+2024-07-12 17:33:52,934 - INFO - Total successful test points: 1
+2024-07-12 17:33:52,934 - INFO - Total failed test points: 0
+2024-07-12 17:33:52,934 - INFO - All test points passed successfully.
+2024-07-12 17:33:52,936 - INFO - Sending request to http://139.196.106.190:8080/user/authority/1 with data: {}
+2024-07-12 17:33:52,937 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,005 - DEBUG - http://139.196.106.190:8080 "POST /user/authority/1 HTTP/1.1" 405 None
+2024-07-12 17:33:53,006 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,007 - ERROR - Response text: {"timestamp":1720776833911,"status":405,"error":"Method Not Allowed","path":"/user/authority/1"}
+2024-07-12 17:33:53,007 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/authority/1
+2024-07-12 17:33:53,007 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,007 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,007 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,010 - INFO - Sending request to http://139.196.106.190:8080/user/userInfo with data: {'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTczMTExNzgsInVzZXJJZCI6IjcifQ.Ea2UiLBWwZtYkvhlHnVDp7ZAcVDJzX94motJDRs2UaE'}
+2024-07-12 17:33:53,011 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,073 - DEBUG - http://139.196.106.190:8080 "POST /user/userInfo HTTP/1.1" 405 None
+2024-07-12 17:33:53,078 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,078 - ERROR - Response text: {"timestamp":1720776833979,"status":405,"error":"Method Not Allowed","path":"/user/userInfo"}
+2024-07-12 17:33:53,078 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/userInfo
+2024-07-12 17:33:53,078 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,079 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,079 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,081 - INFO - Sending request to http://139.196.106.190:8080/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string'}
+2024-07-12 17:33:53,082 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,144 - DEBUG - http://139.196.106.190:8080 "POST /user HTTP/1.1" 200 None
+2024-07-12 17:33:53,144 - INFO - Request successful!
+2024-07-12 17:33:53,144 - INFO - Total successful test points: 1
+2024-07-12 17:33:53,144 - INFO - Total failed test points: 0
+2024-07-12 17:33:53,144 - INFO - All test points passed successfully.
+2024-07-12 17:33:53,146 - INFO - Sending request to http://139.196.106.190:8080/user/login with data: {'password': 'admin', 'username': 'admin'}
+2024-07-12 17:33:53,147 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,232 - DEBUG - http://139.196.106.190:8080 "POST /user/login HTTP/1.1" 200 None
+2024-07-12 17:33:53,233 - INFO - Request successful!
+2024-07-12 17:33:53,233 - INFO - Total successful test points: 1
+2024-07-12 17:33:53,234 - INFO - Total failed test points: 0
+2024-07-12 17:33:53,234 - INFO - All test points passed successfully.
+2024-07-12 17:33:53,235 - INFO - Sending request to http://139.196.106.190:8080/user/logout with data: {}
+2024-07-12 17:33:53,236 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,295 - DEBUG - http://139.196.106.190:8080 "POST /user/logout HTTP/1.1" 401 0
+2024-07-12 17:33:53,296 - ERROR - Request failed with status code: 401
+2024-07-12 17:33:53,296 - ERROR - Response text: 
+2024-07-12 17:33:53,296 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/logout
+2024-07-12 17:33:53,296 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,296 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,296 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,297 - INFO - Sending request to http://139.196.106.190:8080/user/page with data: {}
+2024-07-12 17:33:53,298 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,361 - DEBUG - http://139.196.106.190:8080 "POST /user/page HTTP/1.1" 405 None
+2024-07-12 17:33:53,362 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,362 - ERROR - Response text: {"timestamp":1720776834265,"status":405,"error":"Method Not Allowed","path":"/user/page"}
+2024-07-12 17:33:53,362 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/page
+2024-07-12 17:33:53,362 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,362 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,362 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,364 - INFO - Sending request to http://139.196.106.190:8080/user/editPassword with data: {'userId': 0, 'newPassword': 'string', 'oldPassword': 'string'}
+2024-07-12 17:33:53,366 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,428 - DEBUG - http://139.196.106.190:8080 "POST /user/editPassword HTTP/1.1" 405 None
+2024-07-12 17:33:53,429 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,429 - ERROR - Response text: {"timestamp":1720776834335,"status":405,"error":"Method Not Allowed","path":"/user/editPassword"}
+2024-07-12 17:33:53,429 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/editPassword
+2024-07-12 17:33:53,429 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,429 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,429 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,430 - INFO - Sending request to http://139.196.106.190:8080/user/555666777 with data: {}
+2024-07-12 17:33:53,431 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,494 - DEBUG - http://139.196.106.190:8080 "POST /user/555666777 HTTP/1.1" 405 None
+2024-07-12 17:33:53,494 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,494 - ERROR - Response text: {"timestamp":1720776834399,"status":405,"error":"Method Not Allowed","path":"/user/555666777"}
+2024-07-12 17:33:53,494 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/555666777
+2024-07-12 17:33:53,494 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,494 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,494 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,496 - INFO - Sending request to http://139.196.106.190:8080/user/status/1 with data: {}
+2024-07-12 17:33:53,497 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,559 - DEBUG - http://139.196.106.190:8080 "POST /user/status/1 HTTP/1.1" 405 None
+2024-07-12 17:33:53,560 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,560 - ERROR - Response text: {"timestamp":1720776834463,"status":405,"error":"Method Not Allowed","path":"/user/status/1"}
+2024-07-12 17:33:53,560 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/status/1
+2024-07-12 17:33:53,561 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,561 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,561 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:33:53,563 - INFO - Sending request to http://139.196.106.190:8080/user/validEmail with data: {'email': '1193466151@qq.com'}
+2024-07-12 17:33:53,564 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:33:53,624 - DEBUG - http://139.196.106.190:8080 "POST /user/validEmail HTTP/1.1" 405 None
+2024-07-12 17:33:53,625 - ERROR - Request failed with status code: 405
+2024-07-12 17:33:53,625 - ERROR - Response text: {"timestamp":1720776834531,"status":405,"error":"Method Not Allowed","path":"/user/validEmail"}
+2024-07-12 17:33:53,625 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/validEmail
+2024-07-12 17:33:53,625 - INFO - Total successful test points: 0
+2024-07-12 17:33:53,626 - INFO - Total failed test points: 1
+2024-07-12 17:33:53,626 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:20,837 - INFO - Sending request to http://139.196.106.190:8080/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string', 'password': 'string'}
+2024-07-12 17:35:20,839 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:20,909 - DEBUG - http://139.196.106.190:8080 "POST /user HTTP/1.1" 200 None
+2024-07-12 17:35:20,911 - INFO - Request successful!
+2024-07-12 17:35:20,911 - INFO - Total successful test points: 1
+2024-07-12 17:35:20,911 - INFO - Total failed test points: 0
+2024-07-12 17:35:20,911 - INFO - All test points passed successfully.
+2024-07-12 17:35:20,913 - INFO - Sending request to http://139.196.106.190:8080/user/authority/1 with data: {}
+2024-07-12 17:35:20,914 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:20,979 - DEBUG - http://139.196.106.190:8080 "POST /user/authority/1 HTTP/1.1" 405 None
+2024-07-12 17:35:20,980 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:20,980 - ERROR - Response text: {"timestamp":1720776921885,"status":405,"error":"Method Not Allowed","path":"/user/authority/1"}
+2024-07-12 17:35:20,980 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/authority/1
+2024-07-12 17:35:20,980 - INFO - Total successful test points: 0
+2024-07-12 17:35:20,980 - INFO - Total failed test points: 1
+2024-07-12 17:35:20,980 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:20,983 - INFO - Sending request to http://139.196.106.190:8080/user/userInfo with data: {'Authorization': 'eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTczMTExNzgsInVzZXJJZCI6IjcifQ.Ea2UiLBWwZtYkvhlHnVDp7ZAcVDJzX94motJDRs2UaE'}
+2024-07-12 17:35:20,984 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,054 - DEBUG - http://139.196.106.190:8080 "POST /user/userInfo HTTP/1.1" 405 None
+2024-07-12 17:35:21,054 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:21,055 - ERROR - Response text: {"timestamp":1720776921959,"status":405,"error":"Method Not Allowed","path":"/user/userInfo"}
+2024-07-12 17:35:21,055 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/userInfo
+2024-07-12 17:35:21,055 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,055 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,055 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:21,056 - INFO - Sending request to http://139.196.106.190:8080/user with data: {'id': 0, 'name': 'string', 'username': 'string', 'email': 'string', 'logoUrl': 'string', 'sex': 'string', 'phone': 'string'}
+2024-07-12 17:35:21,057 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,126 - DEBUG - http://139.196.106.190:8080 "POST /user HTTP/1.1" 200 None
+2024-07-12 17:35:21,127 - INFO - Request successful!
+2024-07-12 17:35:21,127 - INFO - Total successful test points: 1
+2024-07-12 17:35:21,127 - INFO - Total failed test points: 0
+2024-07-12 17:35:21,127 - INFO - All test points passed successfully.
+2024-07-12 17:35:21,128 - INFO - Sending request to http://139.196.106.190:8080/user/login with data: {'password': 'admin', 'username': 'admin'}
+2024-07-12 17:35:21,129 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,245 - DEBUG - http://139.196.106.190:8080 "POST /user/login HTTP/1.1" 200 None
+2024-07-12 17:35:21,246 - INFO - Request successful!
+2024-07-12 17:35:21,247 - INFO - Total successful test points: 1
+2024-07-12 17:35:21,247 - INFO - Total failed test points: 0
+2024-07-12 17:35:21,247 - INFO - All test points passed successfully.
+2024-07-12 17:35:21,249 - INFO - Sending request to http://139.196.106.190:8080/user/logout with data: {}
+2024-07-12 17:35:21,250 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,307 - DEBUG - http://139.196.106.190:8080 "POST /user/logout HTTP/1.1" 401 0
+2024-07-12 17:35:21,307 - ERROR - Request failed with status code: 401
+2024-07-12 17:35:21,307 - ERROR - Response text: 
+2024-07-12 17:35:21,307 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/logout
+2024-07-12 17:35:21,307 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,307 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,307 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:21,309 - INFO - Sending request to http://139.196.106.190:8080/user/page with data: {}
+2024-07-12 17:35:21,310 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,384 - DEBUG - http://139.196.106.190:8080 "POST /user/page HTTP/1.1" 405 None
+2024-07-12 17:35:21,385 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:21,385 - ERROR - Response text: {"timestamp":1720776922285,"status":405,"error":"Method Not Allowed","path":"/user/page"}
+2024-07-12 17:35:21,385 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/page
+2024-07-12 17:35:21,385 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,385 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,385 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:21,386 - INFO - Sending request to http://139.196.106.190:8080/user/editPassword with data: {'userId': 0, 'newPassword': 'string', 'oldPassword': 'string'}
+2024-07-12 17:35:21,387 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,461 - DEBUG - http://139.196.106.190:8080 "POST /user/editPassword HTTP/1.1" 405 None
+2024-07-12 17:35:21,479 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:21,479 - ERROR - Response text: {"timestamp":1720776922365,"status":405,"error":"Method Not Allowed","path":"/user/editPassword"}
+2024-07-12 17:35:21,479 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/editPassword
+2024-07-12 17:35:21,479 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,479 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,479 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:21,481 - INFO - Sending request to http://139.196.106.190:8080/user/555666777 with data: {}
+2024-07-12 17:35:21,482 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,544 - DEBUG - http://139.196.106.190:8080 "POST /user/555666777 HTTP/1.1" 405 None
+2024-07-12 17:35:21,545 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:21,545 - ERROR - Response text: {"timestamp":1720776922451,"status":405,"error":"Method Not Allowed","path":"/user/555666777"}
+2024-07-12 17:35:21,545 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/555666777
+2024-07-12 17:35:21,545 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,545 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,545 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:21,546 - INFO - Sending request to http://139.196.106.190:8080/user/status/1 with data: {}
+2024-07-12 17:35:21,547 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,628 - DEBUG - http://139.196.106.190:8080 "POST /user/status/1 HTTP/1.1" 405 None
+2024-07-12 17:35:21,629 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:21,629 - ERROR - Response text: {"timestamp":1720776922532,"status":405,"error":"Method Not Allowed","path":"/user/status/1"}
+2024-07-12 17:35:21,629 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/status/1
+2024-07-12 17:35:21,629 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,629 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,629 - WARNING - Some test points failed. Check the logs for details.
+2024-07-12 17:35:21,631 - INFO - Sending request to http://139.196.106.190:8080/user/validEmail with data: {'email': '1193466151@qq.com'}
+2024-07-12 17:35:21,632 - DEBUG - Starting new HTTP connection (1): 139.196.106.190:8080
+2024-07-12 17:35:21,700 - DEBUG - http://139.196.106.190:8080 "POST /user/validEmail HTTP/1.1" 405 None
+2024-07-12 17:35:21,700 - ERROR - Request failed with status code: 405
+2024-07-12 17:35:21,701 - ERROR - Response text: {"timestamp":1720776922604,"status":405,"error":"Method Not Allowed","path":"/user/validEmail"}
+2024-07-12 17:35:21,701 - ERROR - Failing API endpoint: http://139.196.106.190:8080/user/validEmail
+2024-07-12 17:35:21,701 - INFO - Total successful test points: 0
+2024-07-12 17:35:21,701 - INFO - Total failed test points: 1
+2024-07-12 17:35:21,701 - WARNING - Some test points failed. Check the logs for details.

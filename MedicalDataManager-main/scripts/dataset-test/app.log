@@ -1,0 +1,10 @@
+2024-07-12 16:37:42,476 - INFO - Total successful test points: 0
+2024-07-12 16:37:42,476 - INFO - Total failed test points: 0
+2024-07-12 16:37:42,476 - INFO - All test points passed successfully.
+2024-07-12 16:38:10,350 - INFO - Sending request to http://127.0.0.1:8080/dataset/add with data: {'id': 555666777888, 'name': '测试数据集', 'isPublic': 1, 'datasetUrl': 'www.baidu.com', 'shareOrganization': [{'id': 11111}, {'id': 22222}, {'id': 33333}, {'id': 44444}, {'id': 55555}]}
+2024-07-12 16:38:10,356 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8080
+2024-07-12 16:38:12,391 - ERROR - Request failed: HTTPConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /dataset/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002307868A278>: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。'))
+2024-07-12 16:38:12,392 - ERROR - Failing API endpoint: http://127.0.0.1:8080/dataset/add
+2024-07-12 16:38:12,392 - INFO - Total successful test points: 0
+2024-07-12 16:38:12,392 - INFO - Total failed test points: 1
+2024-07-12 16:38:12,392 - WARNING - Some test points failed. Check the logs for details.
