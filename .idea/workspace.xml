@@ -107,7 +107,7 @@
       <recent name="org.example.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShareMiracleApplication">
+  <component name="RunManager">
     <configuration name="User-test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/gcsj-server/src/main/resources/http/User-test.http" requestIdentifier="#1">
       <method v="2" />
     </configuration>
@@ -134,11 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
